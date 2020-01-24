@@ -4,9 +4,9 @@ class Connection
 {
 	
 	private $host = "localhost";
-	private $user = "root";
-	private $password = "";
-	private $database = "db_espaco_do_transito";
+	private $user = "ruanscherer01";
+	private $password = "rvs456158";
+	private $database = "ruanscherer01";
 
 	public function __get($prop)
 	{
