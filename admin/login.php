@@ -1,3 +1,20 @@
+<?php
+
+session_start();
+
+if(isset($_SESSION['id']))
+{
+  Header("Location: dashboard.php");
+}
+else
+{
+  session_destroy();
+}
+
+include_once("../Controller/UserController.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -13,8 +30,8 @@
   </head>
   <body style="background: linear-gradient(45deg, #016D94, #029DC0)">
     <div class="d-flex flex-column align-items-center justify-content-center p-3" style="width: 100vw; height: 100vh">
-      <div class="card p-3" style="width: 100%; max-width: 500px">
-        <div class="card-body">
+      <div class="card" style="width: 100%; max-width: 500px">
+        <div class="card-body p-4">
           <form action="?login=1" method="post">
             <h3 class="text-center font-weight-normal mb-3">Painel Administrativo</h3>
             <div class="form-group">
@@ -25,8 +42,34 @@
               <label for="password">Senha</label>
               <input type="password" class="form-control" id="password" name="password" required>
             </div>
+            <?php
+
+            if(isset($_GET['login']))
+            {
+              $user = new UserController($_POST);
+              if($user->get())
+              {
+                Header("Location: dashboard.php");
+              }
+              else
+              {
+                echo "
+                <p class='alert alert-danger alert-dismissible fade show' role='alert'>
+                  Erro ao logar, tente novamente.
+                  <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                    <span aria-hidden='true'>&times;</span>
+                  </button>
+                </p>
+                ";
+              }
+            }
+
+            ?>
             <button type="submit" class="btn btn-outline-success float-right px-4">Entrar</button>
           </form>
+        </div>
+        <div class="card-footer d-flex justify-content-center">
+          <small class="text-muted">Desenvolvido por Ruan Scherer</small>
         </div>
       </div>
     </div>
