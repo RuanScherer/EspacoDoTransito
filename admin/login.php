@@ -30,7 +30,7 @@ include_once("../Controller/UserController.php");
   </head>
   <body style="background: linear-gradient(45deg, #016D94, #029DC0)">
     <div class="d-flex flex-column align-items-center justify-content-center p-3" style="width: 100vw; height: 100vh">
-      <div class="card" style="width: 100%; max-width: 500px">
+      <div class="card shadow-lg" style="width: 100%; max-width: 500px">
         <div class="card-body p-4">
           <form action="?login=1" method="post">
             <h3 class="text-center font-weight-normal mb-3">Painel Administrativo</h3>
