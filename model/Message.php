@@ -5,6 +5,7 @@ include_once("Connection.php");
 class Message extends Connection
 {
 	
+	private $id;
 	private $email;
 	private $name;
 	private $topic;
@@ -12,6 +13,10 @@ class Message extends Connection
 
 	public function __construct($post)
 	{
+		if(isset($post['id']))
+		{
+			$this->id = $post['id'];
+		}
 		if(isset($post['email']))
 		{
 			$this->email = $post['email'];
