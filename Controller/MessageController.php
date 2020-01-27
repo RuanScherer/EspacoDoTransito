@@ -1,6 +1,6 @@
 <?php 
 
-include_once("./model/Message.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/EspacoDoTransito/model/Message.php");
 
 class MessageController extends Message
 {
