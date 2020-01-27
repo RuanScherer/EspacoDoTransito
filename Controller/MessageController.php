@@ -33,6 +33,20 @@ class MessageController extends Message
 		return mysqli_query($this->connect(), $query);
 	}
 
+	// Search for one message
+	public function getMessage()
+	{
+		$query = "select * from tb_message where idtb_message = ".$this->id;
+		return mysqli_query($this->connect(), $query);
+	}
+
+	//Autodestruct messages with more than 15 days
+	public function autodestruct()
+	{
+		$query = "delete from tb_message where (datediff(date(now()), date)) >= 15";
+		mysqli_query($this->connect(), $query);
+	}
+
 }
 
 ?>
