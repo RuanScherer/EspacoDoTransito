@@ -1,6 +1,6 @@
 <?php 
 
-include_once("./model/Message.php");
+include_once("../model/Message.php");
 
 class MessageController extends Message
 {
@@ -30,16 +30,7 @@ class MessageController extends Message
 	public function getAll()
 	{
 		$query = "select * from tb_message";
-		$response = mysqli_query($this->connect(), $query);
-
-		if($response)
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
+		return mysqli_query($this->connect(), $query);
 	}
 
 }
