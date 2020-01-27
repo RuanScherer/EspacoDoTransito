@@ -3,9 +3,9 @@
 class Connection
 {
 	
-	private $host = "localhost";
+	private $host = "mysql.ruanscherer.kinghost.net";
 	private $user = "ruanscherer01";
-	private $password = "rvs456158";
+	private $password = "F9PHaph4";
 	private $database = "ruanscherer01";
 
 	public function __get($prop)
