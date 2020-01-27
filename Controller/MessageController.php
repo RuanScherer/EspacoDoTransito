@@ -1,6 +1,6 @@
 <?php 
 
-include_once("../model/Message.php");
+include_once("./model/Message.php");
 
 class MessageController extends Message
 {
