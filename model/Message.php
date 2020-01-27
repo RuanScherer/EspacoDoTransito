@@ -12,10 +12,22 @@ class Message extends Connection
 
 	public function __construct($post)
 	{
-		$this->email = $post['email'];
-		$this->name = $post['name'];
-		$this->topic = $post['topic'];
-		$this->message = $post['message'];
+		if(isset($post['email']))
+		{
+			$this->email = $post['email'];
+		}
+		if(isset($post['name']))
+		{
+			$this->name = $post['name'];
+		}
+		if(isset($post['topic']))
+		{
+			$this->topic = $post['topic'];
+		}
+		if(isset($post['message']))
+		{
+			$this->message = $post['message'];
+		}
 	}
 
 	public function __get($prop)
