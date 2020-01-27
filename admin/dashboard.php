@@ -46,7 +46,7 @@ if(isset($_GET['logout']))
 		<!-- POSTS -->
 		<section class="w-100 px-3 py-4 d-flex flex-column align-items-center">
 			<h2 class="font-weight-normal mb-3">O que deseja fazer?</h2>
-			<ul style="list-style: none;" class="d-flex flex-column flex-sm-row justify-content-center align-items-center p-0">
+			<ul style="list-style: none;" class="d-flex flex-column flex-sm-row justify-content-center p-0">
 				<div class="card shadow m-2 w-100" style="max-width: 400px;">
 					<div class="card-body p0 d-flex flex-column justify-content-between">
 						<div>
