@@ -17,6 +17,8 @@ if(isset($_GET['logout']))
 
 $messageController = new MessageController($_POST);
 
+$messageController->autodestruct();
+
 $messages = $messageController->getAll();
 
 ?>
@@ -55,13 +57,13 @@ $messages = $messageController->getAll();
 				while($row = mysqli_fetch_assoc($messages))
 				{
 					echo "
-					<a href='message-details.php?id=".$row['idtb_message']."' class='list-group-item list-group-item-action flex-column align-items-start'>
+					<a class='list-group-item list-group-item-action flex-column align-items-start'>
 				    <div class='d-flex w-100 justify-content-between'>
 				      <h5 class='mb-1'>".$row['topic']."</h5>
 				      <small>".date("d/m/Y", strtotime($row['date']))."</small>
 				    </div>
 				    <p class='mb-1'>".$row['message']."</p>
-				    <small class='text-muted'>".$row['name']."</small>
+				    <small class='text-muted'>".$row['name']." (".$row['email'].")</small>
 				  </a>
 					";
 				}
