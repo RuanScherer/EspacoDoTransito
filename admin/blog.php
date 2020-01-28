@@ -65,10 +65,10 @@ $posts = $postController->getAll();
 								<p class='card-text text-muted'>".date("d/m/Y", strtotime($row['postDate']))."</p>
 							</div>
 							<div class='mt-3 d-flex justify-content-between align-items-center'>
-								<a href='#' class='btn btn-light'>Ver mais</a>
+								<a href='about-post.php?id=".$row['idtb_post']."' class='btn btn-light'>Ver mais</a>
 								<div>
-									<a href='#' class='text-center btn btn-success m-1'>Editar</a>
-									<a href='#' class='text-center btn btn-danger'>Excluir</a>
+									<a href='edit-post?id=".$row['idtb_post']."' class='text-center btn btn-success m-1'>Editar</a>
+									<a href='?delete=".$row['idtb_post']."' class='text-center btn btn-danger'>Excluir</a>
 								</div>
 							</div>
 						</div>
