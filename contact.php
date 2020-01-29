@@ -45,7 +45,7 @@ if(isset($_GET['send']))
 				      <a class="nav-link" href="blog.php">Blog</a>
 				    </li>
 				    <li class="nav-item">
-				      <a class="nav-link" href="contact.html">Contato</a>
+				      <a class="nav-link" href="contact.php">Contato</a>
 				    </li>
 				  </ul>
 				</div>
