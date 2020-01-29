@@ -9,7 +9,7 @@ if(!isset($_SESSION['id']))
 	Header("Location: login.php");
 }
 
-if(isset($_GET['logout']))
+if(isset($_GET['logout']) || !isset($_GET['id']))
 {
 	session_destroy();
 	Header("Location: login.php");
