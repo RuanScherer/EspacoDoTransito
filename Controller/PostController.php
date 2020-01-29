@@ -48,6 +48,13 @@ class PostController extends Post
 		mysqli_query($this->connect(), $query);
 	}
 
+	// Edit a post
+	public function edit()
+	{
+		$query = "update tb_post set title = '".$this->title."', body = '".$this->body."' where idtb_post = ".$this->id;
+		return mysqli_query($this->connect(), $query);
+	}
+
 }
 
 ?>
