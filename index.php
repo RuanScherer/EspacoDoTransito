@@ -112,9 +112,9 @@ if(isset($_GET['send']))
 			  </div>
 			  <div class="form-group">
 			    <label for="message">Mensagem</label>
-			    <textarea class="form-control" id="message" name="message" rows="4" maxlength="100" aria-describedby="tip" required></textarea>
-			    <small id="tip" class="form-text text-muted">
-					  Máximo de 100 caracteres.
+			    <textarea class="form-control" id="message" name="message" rows="4" maxlength="100" required></textarea>
+			    <small class="form-text my-2">
+					  <a href="contact.php" class="text-muted link"><u>Mais opções de contato aqui.</u></a>
 					</small>
 			  </div>
 			  <button type="submit" id="send" class="btn text-white w-100" style="background-color: #029DC0">Enviar</button>
