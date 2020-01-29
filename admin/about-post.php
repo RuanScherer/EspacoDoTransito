@@ -19,6 +19,14 @@ $postController = new PostController($_GET);
 
 $posts = $postController->getPost();
 
+if(isset($_GET['delete']))
+{
+	$_GET['id'] = $_GET['delete'];
+	$post = new PostController($_GET);
+	$post->delete();
+	Header("Location: blog.php");
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +40,7 @@ $posts = $postController->getPost();
     <link rel="stylesheet" href="../bootstrap/bootstrap.css">
     <link rel="stylesheet" href="../styles.css">
 
-    <title>Administrator Blog</title>
+    <title>Administrator Post</title>
   </head>
   <body>
 		<!-- HIGHLIGHT -->
@@ -46,7 +54,7 @@ $posts = $postController->getPost();
 			</nav>
 		</main>
 
-		<!-- POSTS -->
+		<!-- POST -->
 		<section class="w-100 px-3 py-4 d-flex flex-column align-items-center">
 			<?php
 
@@ -54,16 +62,19 @@ $posts = $postController->getPost();
 			{
 				echo "
 				<div class='w-100 p-1 pb-2 d-flex justify-content-between align-items-center' style='max-width: 850px'>
-		  		<span class='lead'>".date("d/m/Y", strtotime($row['postDate']))."</span>
+		  		<div class='d-flex align-items-center'>
+		  			<a href='blog.php' class='btn btn-light m-1'>Voltar</a>
+		  			<span class='lead m-1'>".date("d/m/Y", strtotime($row['postDate']))."</span>
+		  		</div>
 		  		<div>
 						<a href='edit-post?id=".$row['idtb_post']."' class='btn btn-success m-1'>Editar</a>
 						<a href='?delete=".$row['idtb_post']."' class='btn btn-danger m-1'>Excluir</a>
 					</div>
 		  	</div>
 			  <div class='jumbotron bg-light px-5 py-5 w-100' style='max-width: 850px'>
-				  <h1 class='display-4'>".utf8_encode($row['title'])."</h1>
+				  <h1 class='display-4'>".$row['title']."</h1>
 				  <hr class='my-4'>
-				  <p>".nl2br(utf8_encode($row['body']))."</p>
+				  <p>".nl2br($row['body'])."</p>
 				</div>
 				";
 			}
