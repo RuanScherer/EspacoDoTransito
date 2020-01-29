@@ -49,13 +49,16 @@ if(isset($_GET['delete']))
 			<nav class="navbar px-4 py-3 navbar-expand-lg navbar-dark w-100 d-flex justify-content-between">
 				<h1 class="navbar-brand d-xs-none">Espaço do Trânsito</h1>
 				<form action="?logout=1" method="post">
-					<button type="submit" class="btn btn-danger px-4 shadow-sm">Sair</button>
+					<button type="submit" class="btn btn-danger px-4 shadow-sm mr-2">Sair</button>
 				</form>
 			</nav>
 		</main>
 
 		<!-- POSTS -->
 		<section class="w-100 px-3 py-4 d-flex flex-column align-items-center">
+			<div class="w-100 mb-2">
+				<a href="dashboard.php" class="text-muted" style="text-decoration: none">Voltar para o painel administrativo</a>
+			</div>
 			<div class="d-flex justify-content-between align-items-center w-100 mb-4">
 				<h2 class="font-weight-normal">Posts Ativos</h2>
 				<a href="new-post.php" class="btn btn-success">Novo</a>

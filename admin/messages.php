@@ -50,7 +50,10 @@ $messages = $messageController->getAll();
 
 		<!-- POSTS -->
 		<section class="w-100 px-3 py-4 d-flex flex-column align-items-center">
-			<h2 class="font-weight-normal mb-4">Mensagens</h2>
+			<div class="w-100 mb-2 align-self-start">
+				<a href="dashboard.php" class="text-muted" style="text-decoration: none">Voltar para o painel administrativo</a>
+			</div>
+			<h2 class="font-weight-normal mb-4 align-self-start">Mensagens</h2>
 			<ul style="list-style: none;" class="list-group p-0 w-100">
 				<?php
 
