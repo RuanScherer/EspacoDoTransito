@@ -145,8 +145,19 @@ if(isset($_GET['send']))
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.js"></script>
     <script type="text/javascript">
+    	fields = [...document.getElementsByClass("form-control")];
     	document.querySelector("#send").onclick = () => {
-    		alert("Mensagem enviada.");
+    		count = 0;
+    		fields.forEach((field) => {
+    			if(field.value.length > 0) {
+    				count += 1;
+    			}
+    		});
+    		if(count == 4) {
+    			alert("Mensagem enviada.");
+    		} else {
+    			count = 0;
+    		}
     	}
     </script>
   </body>
