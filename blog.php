@@ -63,8 +63,8 @@ $posts = $postController->getAll();
 				while($row = mysqli_fetch_assoc($posts)) 
 				{
 					echo "
-					<div class='card shadow m-3 w-100' style='max-width: 400px'>
-						<div class='card-body p0 d-flex flex-column justify-content-between'>
+					<div class='card shadow my-3 mx-sm-2 w-100' style='max-width: 400px'>
+						<div class='card-body d-flex flex-column justify-content-between'>
 							<div>
 								<h4 class='card-title'>".$row['title']."</h4>
 								<p class='card-text text-muted'>Publicado em ".date("d/m/Y", strtotime($row['postDate']))."</p>
