@@ -19,6 +19,14 @@ $postController = new PostController($_POST);
 
 $posts = $postController->getAll();
 
+if(isset($_GET['delete']))
+{
+	$_GET['id'] = $_GET['delete'];
+	$post = new PostController($_GET);
+	$post->delete();
+	Header("Location: blog.php");
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -50,9 +58,9 @@ $posts = $postController->getAll();
 		<section class="w-100 px-3 py-4 d-flex flex-column align-items-center">
 			<div class="d-flex justify-content-between align-items-center w-100 mb-4">
 				<h2 class="font-weight-normal">Posts Ativos</h2>
-				<a href="" class="btn btn-success">Novo</a>
+				<a href="new-post.php" class="btn btn-success">Novo</a>
 			</div>
-			<ul style="list-style: none;" class="list-group p-0 w-100 d-flex flex-column flex-sm-row">
+			<ul style="list-style: none;" class="list-group p-0 w-100 d-flex flex-column flex-sm-row flex-wrap">
 				<?php
 
 				while($row = mysqli_fetch_assoc($posts))
