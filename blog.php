@@ -1,3 +1,13 @@
+<?php
+
+include_once("Controller/PostController.php");
+
+$postController = new PostController($_POST);
+
+$posts = $postController->getAll();
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -48,7 +58,24 @@
 		<!-- POSTS -->
 		<section class="w-100 px-3 py-4 d-flex flex-column align-items-center">
 			<ul style="list-style: none;" class="d-flex flex-column align-items-center p-0">
+				<?php
 
+				while($row = mysqli_fetch_assoc($posts)) 
+				{
+					echo "
+					<div class='card shadow m-2 w-100' style='max-width: 400px'>
+						<div class='card-body p0 d-flex flex-column justify-content-between'>
+							<div>
+								<h4 class='card-title'>".$row['title']."</h4>
+								<p class='card-text text-muted'>Publicado em ".date("d/m/Y", strtotime($row['postDate']))."</p>
+							</div>
+							<a href='article.php?id=".$row['idtb_post']."' class='text-center btn btn-outline-primary mt-3'>Ler</a>
+						</div>
+					</div>
+					";
+				}
+
+				?>
 			</ul>
 		</section>
 
