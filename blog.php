@@ -57,7 +57,7 @@ $posts = $postController->getAll();
 
 		<!-- POSTS -->
 		<section class="w-100 px-3 py-4 d-flex flex-column align-items-center">
-			<ul style="list-style: none;" class="d-flex flex-column flex-sm-row align-items-center p-0">
+			<ul style="list-style: none;" class="d-flex flex-column flex-sm-row align-items-xs-center p-0">
 				<?php
 
 				while($row = mysqli_fetch_assoc($posts)) 
