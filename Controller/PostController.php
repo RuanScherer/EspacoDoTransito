@@ -40,10 +40,11 @@ class PostController extends Post
 		return mysqli_query($this->connect(), $query);
 	}
 
-	//Autodestruct messages with more than 15 days
-	public function autodestruct()
+	// Delete a post
+	public function delete()
 	{
-		$query = "delete from tb_message where (datediff(date(now()), date)) >= 15";
+		echo "<script>alert('".$this->id."')</script>";
+		$query = "delete from tb_post where idtb_post = ".$this->id;
 		mysqli_query($this->connect(), $query);
 	}
 
