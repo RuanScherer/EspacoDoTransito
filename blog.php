@@ -57,13 +57,13 @@ $posts = $postController->getAll();
 
 		<!-- POSTS -->
 		<section class="w-100 px-3 py-4 d-flex flex-column align-items-center">
-			<ul style="list-style: none;" class="d-flex flex-column align-items-center p-0">
+			<ul style="list-style: none;" class="d-flex flex-column flex-sm-row align-items-center p-0">
 				<?php
 
 				while($row = mysqli_fetch_assoc($posts)) 
 				{
 					echo "
-					<div class='card shadow m-2 w-100' style='max-width: 400px'>
+					<div class='card shadow m-3 w-100' style='max-width: 400px'>
 						<div class='card-body p0 d-flex flex-column justify-content-between'>
 							<div>
 								<h4 class='card-title'>".$row['title']."</h4>
