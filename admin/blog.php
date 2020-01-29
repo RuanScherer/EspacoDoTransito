@@ -69,7 +69,7 @@ if(isset($_GET['delete']))
 				  <div class='card shadow m-2 w-100' style='max-width: 400px;'>
 						<div class='card-body p0 d-flex flex-column justify-content-between'>
 							<div>
-								<h4 class='card-title'>".utf8_encode($row['title'])."</h4>
+								<h4 class='card-title'>".$row['title']."</h4>
 								<p class='card-text text-muted'>".date("d/m/Y", strtotime($row['postDate']))."</p>
 							</div>
 							<div class='mt-3 d-flex justify-content-between align-items-center'>
