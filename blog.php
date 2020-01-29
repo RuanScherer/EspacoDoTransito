@@ -12,7 +12,7 @@
     <!-- Font Awesome Kit -->
     <script src="https://kit.fontawesome.com/d3701b4e65.js" crossorigin="anonymous"></script>
 
-    <title>Espaço do Trânsito - Contato</title>
+    <title>Espaço do Trânsito - Blog</title>
   </head>
   <body>
 		<!-- HIGHLIGHT -->
@@ -25,7 +25,7 @@
 				<div class="collapse navbar-collapse" id="navbarNav">
 				  <ul class="navbar-nav">
 				  	<li class="nav-item">
-				      <a class="nav-link" href="index.html">Home</a>
+				      <a class="nav-link" href="index.php">Home</a>
 				    </li>
 				    <li class="nav-item">
 				      <a class="nav-link" href="courses.html">Cursos</a>
@@ -48,7 +48,7 @@
 		<!-- POSTS -->
 		<section class="w-100 px-3 py-4 d-flex flex-column align-items-center">
 			<ul style="list-style: none;" class="d-flex flex-column align-items-center p-0">
-				
+
 			</ul>
 		</section>
 
