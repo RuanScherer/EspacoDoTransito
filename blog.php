@@ -19,8 +19,8 @@ $posts = $postController->getAll();
     <link rel="stylesheet" href="bootstrap/bootstrap.css">
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Font Awesome Kit -->
-    <script src="https://kit.fontawesome.com/d3701b4e65.js" crossorigin="anonymous"></script>
+    <!-- Icon -->
+    <link rel="sortcut icon" href="assets/logo.png" type="image/png"/>
 
     <title>Espaço do Trânsito - Blog</title>
   </head>

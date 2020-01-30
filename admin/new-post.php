@@ -28,6 +28,9 @@ if(isset($_GET['logout']))
     <link rel="stylesheet" href="../bootstrap/bootstrap.css">
     <link rel="stylesheet" href="../styles.css">
 
+    <!-- Icon -->
+    <link rel="sortcut icon" href="assets/logo.png" type="image/png"/>
+
     <title>Administrator Novo Post</title>
   </head>
   <body>

@@ -22,7 +22,7 @@ if(isset($_GET['send']))
     <link rel="stylesheet" href="styles.css">
 
     <!-- Icon -->
-    <link rel="sortcut icon" href="assets/logo.png" type="image/png"/>;
+    <link rel="sortcut icon" href="assets/logo.png" type="image/png"/>
 
     <!-- Font Awesome Kit -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">

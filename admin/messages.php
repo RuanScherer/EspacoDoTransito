@@ -34,6 +34,9 @@ $messages = $messageController->getAll();
     <link rel="stylesheet" href="../bootstrap/bootstrap.css">
     <link rel="stylesheet" href="../styles.css">
 
+    <!-- Icon -->
+    <link rel="sortcut icon" href="assets/logo.png" type="image/png"/>
+
     <title>Administrator Messages</title>
   </head>
   <body>
