@@ -88,7 +88,7 @@ if(isset($_GET['delete']))
 		  			<span class='lead m-1'>".date("d/m/Y", strtotime($row['postDate']))."</span>
 		  		</div>
 		  		<div>
-						<a href='edit-post?id=".$row['idtb_post']."' class='btn btn-success m-1'>Editar</a>
+						<a href='edit-post.php?id=".$row['idtb_post']."' class='btn btn-success m-1'>Editar</a>
 						<button id='".$row['idtb_post']."' class='btn btn-danger delete-post m-1' data-toggle='modal' data-target='#delete-modal'>Excluir</button>
 					</div>
 		  	</div>

@@ -99,7 +99,7 @@ if(isset($_GET['delete']))
 							<div class='mt-3 d-flex justify-content-between align-items-center'>
 								<a href='about-post.php?id=".$row['idtb_post']."' class='btn btn-light'>Ver mais</a>
 								<div>
-									<a href='edit-post?id=".$row['idtb_post']."' class='text-center btn btn-success m-1'>Editar</a>
+									<a href='edit-post.php?id=".$row['idtb_post']."' class='text-center btn btn-success m-1'>Editar</a>
 									<button id='".$row['idtb_post']."' class='text-center btn btn-danger delete-post' data-toggle='modal' data-target='#delete-modal'>Excluir</button>
 								</div>
 							</div>
