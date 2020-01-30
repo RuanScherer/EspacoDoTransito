@@ -43,6 +43,27 @@ if(isset($_GET['delete']))
     <title>Administrator Blog</title>
   </head>
   <body>
+  	<!-- MODAL -->
+  	<div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">Confirmar Ação</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        Tem certeza que deseja excluir o post?
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
+		        <a href="?delete=" id="confirm-delete" class="btn btn-danger">Sim, excluir</a>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
 		<!-- HIGHLIGHT -->
 		<main style="background: linear-gradient(45deg, #016D94, #029DC0)" class="d-flex flex-column align-items-center w-100 text-center text-light shadow">
 			<!-- HEADER -->
@@ -79,7 +100,7 @@ if(isset($_GET['delete']))
 								<a href='about-post.php?id=".$row['idtb_post']."' class='btn btn-light'>Ver mais</a>
 								<div>
 									<a href='edit-post?id=".$row['idtb_post']."' class='text-center btn btn-success m-1'>Editar</a>
-									<a href='?delete=".$row['idtb_post']."' class='text-center btn btn-danger'>Excluir</a>
+									<button id='".$row['idtb_post']."' class='text-center btn btn-danger delete-post' data-toggle='modal' data-target='#delete-modal'>Excluir</button>
 								</div>
 							</div>
 						</div>
@@ -94,5 +115,13 @@ if(isset($_GET['delete']))
     <script src="../js/jquery.slim.min.js"></script>
     <script src="../js/popper.js"></script>
     <script src="../js/bootstrap.js"></script>
+    <script type="text/javascript">
+    	deleteButtons = [...document.getElementsByClassName("delete-post")];
+    	deleteButtons.forEach((el) => {
+    		el.onclick = () => {
+    			document.querySelector("#confirm-delete").href += el.id;
+    		}
+    	});
+    </script>
   </body>
 </html>
