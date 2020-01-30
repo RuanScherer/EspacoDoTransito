@@ -4,7 +4,7 @@ include_once("../Controller/PostController.php");
 
 session_start();
 
-if(!isset($_SESSION['id']))
+if(!isset($_SESSION['id']) || !isset($_GET['id']))
 {
 	Header("Location: login.php");
 }
