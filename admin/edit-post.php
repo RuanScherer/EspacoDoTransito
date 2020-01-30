@@ -43,7 +43,7 @@ if(isset($_GET['alter']))
   </head>
   <body>
 		<!-- HIGHLIGHT -->
-		<main style="background: linear-gradient(45deg, #016D94, #029DC0)" class="d-flex flex-column align-items-center w-100 text-center text-light shadow">
+		<main class="d-flex flex-column align-items-center w-100 text-center text-light shadow background-right">
 			<!-- HEADER -->
 			<nav class="navbar px-4 py-3 navbar-expand-lg navbar-dark w-100 d-flex justify-content-between">
 				<h1 class="navbar-brand d-xs-none">Espaço do Trânsito</h1>
@@ -56,7 +56,7 @@ if(isset($_GET['alter']))
 		<!-- FORM -->
 		<section class="w-100 px-3 py-4 d-flex flex-column align-items-center">
 			<h2 class="font-weight-normal">Editar Post</h2>
-			<form method="post" action="?alter=1" class="w-100 p-2" style="max-width: 550px">
+			<form method="post" action="?alter=1" class="w-100 p-2 max-550">
         <?php
         while ($row = mysqli_fetch_assoc($post)) 
         {

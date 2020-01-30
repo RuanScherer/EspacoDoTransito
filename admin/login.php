@@ -26,10 +26,17 @@ include_once("../Controller/UserController.php");
     <link rel="stylesheet" href="../bootstrap/bootstrap.css">
     <link rel="stylesheet" href="../styles.css">
 
+    <style type="text/css">
+      .all-viewport {
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
+
     <title>Administrator Login</title>
   </head>
-  <body style="background: linear-gradient(45deg, #016D94, #029DC0)">
-    <div class="d-flex flex-column align-items-center justify-content-center p-3" style="width: 100vw; height: 100vh">
+  <body class="background-right">
+    <div class="d-flex flex-column align-items-center justify-content-center p-3 all-viewport">
       <div class="card shadow-lg" style="width: 100%; max-width: 500px">
         <div class="card-body p-4">
           <form action="?login=1" method="post">

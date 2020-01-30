@@ -38,7 +38,7 @@ $messages = $messageController->getAll();
   </head>
   <body>
 		<!-- HIGHLIGHT -->
-		<main style="background: linear-gradient(45deg, #016D94, #029DC0)" class="d-flex flex-column align-items-center w-100 text-center text-light shadow">
+		<main class="d-flex flex-column align-items-center w-100 text-center text-light shadow background-right">
 			<!-- HEADER -->
 			<nav class="navbar px-4 py-3 navbar-expand-lg navbar-dark w-100 d-flex justify-content-between">
 				<h1 class="navbar-brand d-xs-none">Espaço do Trânsito</h1>
@@ -51,10 +51,10 @@ $messages = $messageController->getAll();
 		<!-- POSTS -->
 		<section class="w-100 px-3 py-4 d-flex flex-column align-items-center">
 			<div class="w-100 mb-2 align-self-start">
-				<a href="dashboard.php" class="text-muted" style="text-decoration: none">Voltar para o painel administrativo</a>
+				<a href="dashboard.php" class="text-muted text-decoration-none">Voltar para o painel administrativo</a>
 			</div>
 			<h2 class="font-weight-normal mb-4 align-self-start">Mensagens</h2>
-			<ul style="list-style: none;" class="list-group p-0 w-100">
+			<ul class="list-group p-0 w-100 list-unstyled">
 				<?php
 
 				while($row = mysqli_fetch_assoc($messages))

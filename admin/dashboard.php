@@ -30,7 +30,7 @@ if(isset($_GET['logout']))
   </head>
   <body>
 		<!-- HIGHLIGHT -->
-		<main style="background: linear-gradient(45deg, #016D94, #029DC0)" class="d-flex flex-column align-items-center w-100 text-center text-light pb-5 shadow">
+		<main class="d-flex flex-column align-items-center w-100 text-center text-light pb-5 shadow background-right">
 			<!-- HEADER -->
 			<nav class="navbar px-4 py-3 navbar-expand-lg navbar-dark w-100 d-flex justify-content-between">
 				<h1 class="navbar-brand d-xs-none">Espaço do Trânsito</h1>
@@ -39,15 +39,15 @@ if(isset($_GET['logout']))
 				</form>
 			</nav>
 
-			<h1 class="text-center mt-4" style="max-width: 80%">Painel Administrativo</h1>
-			<h4 style="max-width: 95%" class="font-weight-normal mb-4">Você no controle.</h4>
+			<h1 class="text-center mt-4 title-width">Painel Administrativo</h1>
+			<h4 class="font-weight-normal mb-4 subtitle-width">Você no controle.</h4>
 		</main>
 
 		<!-- POSTS -->
 		<section class="w-100 px-3 py-4 d-flex flex-column align-items-center">
 			<h2 class="font-weight-normal mb-3">O que deseja fazer?</h2>
-			<ul style="list-style: none;" class="d-flex flex-column flex-sm-row justify-content-center p-0">
-				<div class="card shadow m-2 w-100" style="max-width: 400px;">
+			<ul class="d-flex flex-column flex-sm-row justify-content-center p-0 list-unstyled">
+				<div class="card shadow m-2 w-100 max-400">
 					<div class="card-body p0 d-flex flex-column justify-content-between">
 						<div>
 							<h4 class="card-title">Mensagens</h4>
@@ -56,7 +56,7 @@ if(isset($_GET['logout']))
 						<a href="messages.php" class="text-center btn btn-outline-primary mt-3">Ir</a>
 					</div>
 				</div>
-				<div class="card shadow m-2 w-100" style="max-width: 400px">
+				<div class="card shadow m-2 w-100 max-400">
 					<div class="card-body p0 d-flex flex-column justify-content-between">
 						<div>
 							<h4 class="card-title">Blog</h4>

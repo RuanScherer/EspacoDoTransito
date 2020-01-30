@@ -28,11 +28,11 @@ if(isset($_GET['logout']))
     <link rel="stylesheet" href="../bootstrap/bootstrap.css">
     <link rel="stylesheet" href="../styles.css">
 
-    <title>Administrator New Post</title>
+    <title>Administrator Novo Post</title>
   </head>
   <body>
 		<!-- HIGHLIGHT -->
-		<main style="background: linear-gradient(45deg, #016D94, #029DC0)" class="d-flex flex-column align-items-center w-100 text-center text-light shadow">
+		<main class="d-flex flex-column align-items-center w-100 text-center text-light shadow background-right">
 			<!-- HEADER -->
 			<nav class="navbar px-4 py-3 navbar-expand-lg navbar-dark w-100 d-flex justify-content-between">
 				<h1 class="navbar-brand d-xs-none">Espaço do Trânsito</h1>

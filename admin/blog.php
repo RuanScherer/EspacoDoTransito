@@ -65,7 +65,7 @@ if(isset($_GET['delete']))
 		</div>
 
 		<!-- HIGHLIGHT -->
-		<main style="background: linear-gradient(45deg, #016D94, #029DC0)" class="d-flex flex-column align-items-center w-100 text-center text-light shadow">
+		<main class="d-flex flex-column align-items-center w-100 text-center text-light shadow background-right">
 			<!-- HEADER -->
 			<nav class="navbar px-4 py-3 navbar-expand-lg navbar-dark w-100 d-flex justify-content-between">
 				<h1 class="navbar-brand d-xs-none">Espaço do Trânsito</h1>
@@ -78,19 +78,19 @@ if(isset($_GET['delete']))
 		<!-- POSTS -->
 		<section class="w-100 px-3 py-4 d-flex flex-column align-items-center">
 			<div class="w-100 mb-2">
-				<a href="dashboard.php" class="text-muted" style="text-decoration: none">Voltar para o painel administrativo</a>
+				<a href="dashboard.php" class="text-muted text-decoration-none">Voltar para o painel administrativo</a>
 			</div>
 			<div class="d-flex justify-content-between align-items-center w-100 mb-4">
 				<h2 class="font-weight-normal">Posts Ativos</h2>
 				<a href="new-post.php" class="btn btn-success">Novo</a>
 			</div>
-			<ul style="list-style: none;" class="list-group p-0 w-100 d-flex flex-column flex-sm-row flex-wrap">
+			<ul class="list-group p-0 w-100 d-flex flex-column flex-sm-row flex-wrap unstyled-list">
 				<?php
 
 				while($row = mysqli_fetch_assoc($posts))
 				{
 					echo "
-				  <div class='card shadow m-2 w-100' style='max-width: 400px;'>
+				  <div class='card shadow m-2 w-100 max-400'>
 						<div class='card-body p0 d-flex flex-column justify-content-between'>
 							<div>
 								<h4 class='card-title'>".$row['title']."</h4>
