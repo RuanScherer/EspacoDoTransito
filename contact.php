@@ -100,7 +100,7 @@ if(isset($_GET['send']))
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.js"></script>
     <script type="text/javascript">
-    	fields = [...document.getElementsByClass("form-control")];
+    	fields = [...document.getElementsByClassName("form-control")];
     	document.querySelector("#send").onclick = () => {
     		count = 0;
     		fields.forEach((field) => {
