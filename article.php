@@ -75,8 +75,8 @@ $posts = $postController->getPost();
 			?>
 		</section>
 
-    <script src="../js/jquery.slim.min.js"></script>
-    <script src="../js/popper.js"></script>
-    <script src="../js/bootstrap.js"></script>
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
   </body>
 </html>
