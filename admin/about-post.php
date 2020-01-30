@@ -9,7 +9,7 @@ if(!isset($_SESSION['id']) || !isset($_GET['id']))
 	Header("Location: login.php");
 }
 
-if(isset($_GET['logout']) || !isset($_GET['id']))
+if(isset($_GET['logout']))
 {
 	session_destroy();
 	Header("Location: login.php");
@@ -61,7 +61,7 @@ if(isset($_GET['delete']))
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
-		        <a href="?delete=" id="confirm-delete" class="btn btn-danger">Sim, excluir</a>
+		        <a href="about-post.php?delete=" id="confirm-delete" class="btn btn-danger">Sim, excluir</a>
 		      </div>
 		    </div>
 		  </div>
