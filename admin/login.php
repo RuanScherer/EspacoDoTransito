@@ -27,7 +27,7 @@ include_once("../Controller/UserController.php");
     <link rel="stylesheet" href="../styles.css">
 
     <!-- Icon -->
-    <link rel="sortcut icon" href="assets/logo.png" type="image/png"/>
+    <link rel="sortcut icon" href="../assets/logo.png" type="image/png"/>
 
     <style type="text/css">
       .all-viewport {
