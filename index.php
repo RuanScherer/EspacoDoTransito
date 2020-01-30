@@ -21,6 +21,9 @@ if(isset($_GET['send']))
     <link rel="stylesheet" href="bootstrap/bootstrap.css">
     <link rel="stylesheet" href="styles.css">
 
+    <!-- Icon -->
+    <link rel="sortcut icon" href="assets/logo.png" type="image/png"/>;
+
     <!-- Font Awesome Kit -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
 
@@ -28,7 +31,7 @@ if(isset($_GET['send']))
   </head>
   <body>
 		<!-- HIGHLIGHT -->
-		<main style="background: linear-gradient(45deg, #016D94, #029DC0)" class="d-flex flex-column align-items-center w-100 text-center text-light pb-5">
+		<main class="d-flex flex-column align-items-center w-100 text-center text-light pb-5 background-right">
 			<!-- HEADER -->
 			<nav class="navbar px-4 py-3 navbar-expand-lg navbar-dark w-100 d-flex justify-content-center">
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,32 +55,32 @@ if(isset($_GET['send']))
 				</div>
 			</nav>
 
-			<h1 class="text-center mt-4" style="max-width: 80%">Espaço do Trânsito</h1>
-			<h4 style="max-width: 95%" class="font-weight-normal mb-4">Trabalhando com mudanças de comportamentos no trânsito.</h4>
+			<h1 class="text-center mt-4 title-width">Espaço do Trânsito</h1>
+			<h4 class="font-weight-normal mb-4 subtitle-width">Trabalhando com mudanças de comportamentos no trânsito.</h4>
 			<!-- ADICIONAR SETA COM ANIMAÇÃO -->
 		</main>
 
 		<!-- NOTICES -->
 		<section class="w-100 p-3 d-flex flex-column align-items-center">
 			<h2 class="text-center font-weight-normal mb-1">Destaques</h2>
-			<ul style="list-style: none;" class="d-flex flex-column align-items-center p-0 w-100">
-				<li class="jumbotron p-4 my-3 w-100" style="max-width: 800px">
+			<ul class="d-flex flex-column align-items-center p-0 w-100 list-unstyled">
+				<li class="jumbotron p-4 my-3 w-100 max-800">
 				  <h4 class="font-weight-normal">Formação para Instrutor</h4>
 				  <p class="lead">Início dia 25/01 a 22/03/2020. Sábados e Domingos - 08h00 as 17h20</p>
 				  <hr class="my-4">
-				  <a class="btn text-white" style="background-color: #029DC0" href="courses/instrutor.html" role="button">Saiba mais</a>
+				  <a class="btn text-white blue-button" href="courses/instrutor.html" role="button">Saiba mais</a>
 				</li>
-				<li class="jumbotron p-4 my-3 w-100" style="max-width: 800px">
+				<li class="jumbotron p-4 my-3 w-100 max-800">
 				  <h4 class="font-weight-normal">Curso de Atualização para Instrutor - (C.A.I.)</h4>
 				  <p class="lead">Nos dias 08 e 09/02/2020 Sábado e Domingo.</p>
 				  <hr class="my-4">
-				  <a class="btn text-white" style="background-color: #029DC0" href="courses/atualizacao-instrutor.html" role="button">Saiba mais</a>
+				  <a class="btn text-white blue-button" href="courses/atualizacao-instrutor.html" role="button">Saiba mais</a>
 				</li>
-				<li class="jumbotron p-4 my-3 w-100" style="max-width: 800px">
+				<li class="jumbotron p-4 my-3 w-100 max-800">
 				  <h4 class="font-weight-normal">Curso de Atualização de Diretor Geral - (ADG)</h4>
 				  <p class="lead">Dias 05 e 06 de Fevereiro de 2020.</p>
 				  <hr class="my-4">
-				  <a class="btn text-white" style="background-color: #029DC0" href="courses/atualizacao-diretor-geral.html" role="button">Saiba mais</a>
+				  <a class="btn text-white blue-button" href="courses/atualizacao-diretor-geral.html" role="button">Saiba mais</a>
 				</li>
 			</ul>
 		</section>
@@ -91,7 +94,7 @@ if(isset($_GET['send']))
 		<!-- CONTACT -->
 		<section class="w-100 p-3 d-flex flex-column align-items-center">
 			<h2 class="text-center font-weight-normal">Entre em contato</h2>
-			<form method="post" action="?send=1" class="w-100" style="max-width: 550px">
+			<form method="post" action="?send=1" class="w-100 max-550">
 			  <div class="form-group">
 			    <label for="email">Email</label>
 			    <input type="email" class="form-control" id="email" name="email" required>
@@ -111,7 +114,7 @@ if(isset($_GET['send']))
 					  <a href="contact.php" class="text-muted link"><u>Mais opções de contato aqui.</u></a>
 					</small>
 			  </div>
-			  <button type="submit" id="send" class="btn text-white w-100" style="background-color: #029DC0">Enviar</button>
+			  <button type="submit" id="send" class="btn text-white w-100 blue-button">Enviar</button>
 			</form>
 		</section>
 
@@ -123,7 +126,7 @@ if(isset($_GET['send']))
 
 
 		<!-- FOOTER -->
-		<footer class="d-flex flex-column align-items-center text-light w-100" style="background: linear-gradient(45deg, #016D94, #029DC0)">
+		<footer class="d-flex flex-column align-items-center text-light w-100 background-right">
 			<div class="d-flex justify-content-between w-100 p-4">
 				<div>
 					<h4>Localização</h4>

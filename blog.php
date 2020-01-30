@@ -26,7 +26,7 @@ $posts = $postController->getAll();
   </head>
   <body>
 		<!-- HIGHLIGHT -->
-		<main style="background: linear-gradient(45deg, #016D94, #029DC0)" class="d-flex flex-column align-items-center w-100 text-center text-light pb-5">
+		<main class="d-flex flex-column align-items-center w-100 text-center text-light pb-5 background-right">
 			<!-- HEADER -->
 			<nav class="navbar px-4 py-3 navbar-expand-lg navbar-dark w-100 d-flex justify-content-center">
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,20 +50,20 @@ $posts = $postController->getAll();
 				</div>
 			</nav>
 
-			<h1 class="text-center mt-4" style="max-width: 80%">Blog</h1>
-			<h4 style="max-width: 95%" class="font-weight-normal mb-4">Fique por dentro das últimas novidades.</h4>
+			<h1 class="text-center mt-4 title-width">Blog</h1>
+			<h4 class="font-weight-normal mb-4 subtitle-width">Fique por dentro das últimas novidades.</h4>
 			<!-- ADICIONAR SETA COM ANIMAÇÃO -->
 		</main>
 
 		<!-- POSTS -->
 		<section class="w-100 px-3 py-4 d-flex flex-column align-items-center">
-			<ul style="list-style: none;" class="d-flex flex-column flex-sm-row align-items-xs-center p-0">
+			<ul class="d-flex flex-column flex-sm-row align-items-xs-center p-0 list-unstyled">
 				<?php
 
 				while($row = mysqli_fetch_assoc($posts)) 
 				{
 					echo "
-					<div class='card shadow my-3 mx-sm-2 w-100' style='max-width: 400px'>
+					<div class='card shadow my-3 mx-sm-2 w-100 max-400'>
 						<div class='card-body d-flex flex-column justify-content-between'>
 							<div>
 								<h4 class='card-title'>".$row['title']."</h4>
@@ -80,7 +80,7 @@ $posts = $postController->getAll();
 		</section>
 
 		<!-- FOOTER -->
-		<footer class="d-flex flex-column align-items-center text-light w-100" style="background: linear-gradient(45deg, #016D94, #029DC0)">
+		<footer class="d-flex flex-column align-items-center text-light w-100 background-right">
 			<div class="d-flex justify-content-between w-100 p-4">
 				<div>
 					<h4>Localização</h4>

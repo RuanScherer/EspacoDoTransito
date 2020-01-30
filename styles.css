@@ -1,0 +1,27 @@
+.background-right {
+	background: linear-gradient(45deg, #016D94, #029DC0);
+}
+
+.title-width {
+	max-width: 80%;
+}
+
+.subtitle-width {
+	max-width: 95%;
+}
+
+.blue-button {
+	background-color: #029DC0 !important;
+}
+
+.max-800 {
+	max-width: 800px;
+}
+
+.max-550 {
+	max-width: 550px;
+}
+
+.max-400 {
+	max-width: 400px;
+}

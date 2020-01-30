@@ -27,7 +27,7 @@ if(isset($_GET['send']))
   </head>
   <body>
 		<!-- HIGHLIGHT -->
-		<main style="background: linear-gradient(45deg, #016D94, #029DC0)" class="d-flex flex-column align-items-center w-100 text-center text-light pb-5">
+		<main class="d-flex flex-column align-items-center w-100 text-center text-light pb-5 background-right">
 			<!-- HEADER -->
 			<nav class="navbar px-4 py-3 navbar-expand-lg navbar-dark w-100 d-flex justify-content-center">
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,14 +51,14 @@ if(isset($_GET['send']))
 				</div>
 			</nav>
 
-			<h1 class="text-center mt-4" style="max-width: 80%">Contato</h1>
-			<h4 style="max-width: 95%" class="font-weight-normal mb-4">Tire dúvidas ou deixe uma mensagem.</h4>
+			<h1 class="text-center mt-4 title-width">Contato</h1>
+			<h4 class="font-weight-normal mb-4 subtitle-width">Tire dúvidas ou deixe uma mensagem.</h4>
 			<!-- ADICIONAR SETA COM ANIMAÇÃO -->
 		</main>
 
 		<!-- CONTACT -->
 		<section class="w-100 px-3 py-4 d-flex flex-column align-items-center">
-			<form method="post" action="?send=1" class="w-100" style="max-width: 550px">
+			<form method="post" action="?send=1" class="w-100 max-550">
 			  <div class="form-group">
 			    <label for="email">Email</label>
 			    <input type="email" class="form-control" id="email" required>
@@ -75,7 +75,7 @@ if(isset($_GET['send']))
 			    <label for="message">Mensagem</label>
 			    <textarea class="form-control" id="message" rows="3" required></textarea>
 			  </div>
-			  <button type="submit" class="btn text-white w-100" style="background-color: #029DC0">Enviar</button>
+			  <button type="submit" class="btn text-white w-100 blue-button">Enviar</button>
 			</form>
 			<span class="text-muted mt-3 mb-2">ou também</span>
 			<span class="text-center my-1">(47) 3035-1915</span>
@@ -84,7 +84,7 @@ if(isset($_GET['send']))
 		</section>
 
 		<!-- FOOTER -->
-		<footer class="d-flex flex-column align-items-center text-light w-100" style="background: linear-gradient(45deg, #016D94, #029DC0)">
+		<footer class="d-flex flex-column align-items-center text-light w-100 background-right">
 			<div class="d-flex justify-content-between w-100 p-4">
 				<div>
 					<h4>Localização</h4>
