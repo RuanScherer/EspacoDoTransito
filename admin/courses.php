@@ -15,6 +15,18 @@ if(isset($_GET['logout']))
 	Header("Location: login.php");
 }
 
+$courseController = new CourseController($_POST);
+
+$courses = $courseController->getAll();
+
+if(isset($_GET['delete']))
+{
+	$_GET['id'] = $_GET['delete'];
+	$course = new CourseController($_GET);
+	$course->delete();
+	Header("Location: courses.php");
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -66,7 +78,7 @@ if(isset($_GET['logout']))
 			</nav>
 		</main>
 
-		<!-- POSTS -->
+		<!-- COURSES -->
 		<section class="w-100 px-3 py-4 d-flex flex-column align-items-center">
 			<div class="w-100 mb-2">
 				<a href="dashboard.php" class="text-muted text-decoration-none">Voltar para o painel administrativo</a>
@@ -76,7 +88,30 @@ if(isset($_GET['logout']))
 				<a href="new-course.php" class="btn btn-success">Novo</a>
 			</div>
 			<ul class="list-group p-0 w-100 d-flex flex-column flex-sm-row flex-wrap unstyled-list">
-				
+				<?php
+
+				while($row = mysqli_fetch_assoc($courses))
+				{
+					echo "
+				  <div class='card shadow m-2 w-100 max-400'>
+						<div class='card-body p0 d-flex flex-column justify-content-between'>
+							<div>
+								<h4 class='card-title'>".$row['name']."</h4>
+								<p class='card-text text-muted'>".$row['description']."</p>
+							</div>
+							<div class='mt-3 d-flex justify-content-between align-items-center'>
+								<a href='about-course.php?id=".$row['idtb_course']."' class='btn btn-light'>Ver mais</a>
+								<div>
+									<a href='edit-course.php?id=".$row['idtb_course']."' class='text-center btn btn-success m-1'>Editar</a>
+									<button id='".$row['idtb_course']."' class='text-center btn btn-danger delete-post' data-toggle='modal' data-target='#delete-modal'>Excluir</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					";
+				}
+
+				?>
 			</ul>
 		</section>
 
