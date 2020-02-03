@@ -128,13 +128,19 @@ if(isset($_GET['send']))
 		<!-- FOOTER -->
 		<footer class="d-flex flex-column align-items-center text-light w-100 background-right">
 			<div class="d-flex justify-content-between w-100 p-4">
-				<div>
+				<div class="d-flex flex-column">
 					<h4>Localização</h4>
 					<span>Rua 25 de Agosto, 190</br>Itoupava Norte, Blumenau - SC</br>CEP 89053-300</span>
+					<a href="https://www.google.com.br/maps/place/R.+25+de+Agosto,+190+-+Itoupava+Norte,+Blumenau+-+SC,+89053-300/@-26.87927,-49.0865652,706m/data=!3m2!1e3!4b1!4m5!3m4!1s0x94df1efcd5cb50a3:0xa3df957d253fd289!8m2!3d-26.8792748!4d-49.0843765" class="text-light mt-2" target="_blank">Abrir no mapa</a>
 				</div>
-				<a class="mt-2" href="https://www.facebook.com/Espa%C3%A7o-do-Tr%C3%A2nsito-Ltda-ME-218579714981802/?ref=br_rs" target="_blank">
-					<img src="assets/facebook-square-brands.svg" style="width: 50px"></i>
-				</a>
+				<div class="d-flex flex-column">
+					<a class="mt-2" href="https://www.facebook.com/Espa%C3%A7o-do-Tr%C3%A2nsito-Ltda-ME-218579714981802/?ref=br_rs" target="_blank">
+						<img src="assets/facebook-square-brands.svg" style="width: 50px"></i>
+					</a>
+					<a class="mt-2" href="https://www.youtube.com/channel/UCjI8U2hlQdfPtuZWqUB-o3w" target="_blank">
+						<img src="assets/youtube-square-brands.svg" style="width: 50px"></i>
+					</a>
+				</div>
 			</div>
 		</footer>
 
