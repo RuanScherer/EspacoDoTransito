@@ -10,7 +10,6 @@ class Course extends Connection
 	private $description;
 	private $start;
 	private $courseload;
-	private $intensive;
 	private $prerequisites;
 	private $documents;
 
@@ -36,17 +35,21 @@ class Course extends Connection
 		{
 			$this->courseload = $post['courseload'];
 		}
-		if(isset($post['intensive']))
-		{
-			$this->intensive = $post['intensive'];
-		}
 		if(isset($post['prerequisites']))
 		{
-			$this->prerequisites = $post['prerequisites'];
+			$prerequisites = explode(",", $post['prerequisites']);
+			foreach ($prerequisites as $key) {
+				$key = trim($key);
+			}
+			$this->prerequisites = serialize($prerequisites);
 		}
 		if(isset($post['documents']))
 		{
-			$this->documents = $post['documents'];
+			$documents = explode(",", $post['documents']);
+			foreach ($documents as $key) {
+				$key = trim($key);
+			}
+			$this->documents = serialize($documents);
 		}
 	}
 
