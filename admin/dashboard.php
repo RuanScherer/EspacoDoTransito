@@ -68,6 +68,15 @@ if(isset($_GET['logout']))
 						<a href="blog.php" class="text-center btn btn-outline-primary mt-3">Ir</a>
 					</div>
 				</div>
+				<div class="card shadow m-2 w-100 max-400">
+					<div class="card-body p0 d-flex flex-column justify-content-between">
+						<div>
+							<h4 class="card-title">Cursos</h4>
+							<p class="card-text">Gerencie os cursos oferecidos pela sua instituição.</p>
+						</div>
+						<a href="courses.php" class="text-center btn btn-outline-primary mt-3">Ir</a>
+					</div>
+				</div>
 			</ul>
 		</section>
 
