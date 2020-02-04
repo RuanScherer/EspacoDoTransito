@@ -41,7 +41,7 @@ if(isset($_GET['send']))
 				      <a class="nav-link" href="index.php">Home</a>
 				    </li>
 				    <li class="nav-item">
-				      <a class="nav-link" href="courses.html">Cursos</a>
+				      <a class="nav-link" href="courses.php">Cursos</a>
 				    </li>
 				    <li class="nav-item">
 				      <a class="nav-link" href="blog.php">Blog</a>
@@ -128,6 +128,7 @@ if(isset($_GET['send']))
 			  <div class="form-group">
 			    <label for="renach">RENACH</label>
 			    <input type="text" class="form-control field" id="renach" name="renach" required>
+			    <small class="text-muted" id="renach">Não sabe oque é o RENACH? Clique aqui.</small>
 			  </div>
 			  <div class="form-group">
 			    <label for="schooling">Escolaridade</label>

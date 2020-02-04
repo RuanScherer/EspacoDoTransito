@@ -1,5 +1,7 @@
 <?php
 
+include_once("Controller/MessageController.php");
+
 if(isset($_GET['send']))
 {
 	$message = new MessageController($_POST);
@@ -39,7 +41,7 @@ if(isset($_GET['send']))
 				      <a class="nav-link" href="index.php">Home</a>
 				    </li>
 				    <li class="nav-item">
-				      <a class="nav-link" href="courses.html">Cursos</a>
+				      <a class="nav-link" href="courses.php">Cursos</a>
 				    </li>
 				    <li class="nav-item">
 				      <a class="nav-link" href="blog.php">Blog</a>
