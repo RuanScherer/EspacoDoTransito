@@ -68,12 +68,12 @@ if(isset($_GET['logout']))
         </div>
         <div class="form-group">
           <label for="prerequisites">Pré-Requisitos</label>
-          <input type="text" class="form-control" id="prerequisites" name="prerequisites" required>
+          <textarea rows="4" class="form-control" id="prerequisites" name="prerequisites" required></textarea>
           <small id="tip" class="form-text text-muted">Separe-os por vírgulas e o sistema irá formatá-los automaticamente quando forem exibidos.</small>
         </div>
         <div class="form-group">
           <label for="documents">Documentos Necessários</label>
-          <input type="text" class="form-control" id="documents" name="documents" required>
+          <textarea rows="4" class="form-control" id="documents" name="documents" required></textarea>
           <small id="tip" class="form-text text-muted">Separe-os por vírgulas e o sistema irá formatá-los automaticamente quando forem exibidos.</small>
         </div>
         <?php
