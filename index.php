@@ -85,14 +85,15 @@ if(isset($_GET['send']))
 			</ul>
 		</section>
 
-		<!-- ABOUT -->
+		<!-- SUBSCRIBE -->
 		<section style="background: linear-gradient(45deg, #029DC0, #016D94)" class="d-flex flex-column align-items-center w-100 py-4 px-3 text-center text-light">
-			<h2 class="text-center font-weight-normal mb-3">Sobre Nós</h2>
-			<p style="max-width: 650px">A Empresa Espaço do Trânsito LTDA. ME agora é uma realidade. Nosso objetivo é trabalhar mudanças de comportamentos no trânsito, através de cursos de capacitações e de formação, também estaremos junto com a sociedade realizando parcerias para um trânsito mais humano. Estaremos buscando o que há de melhor no mercado para instruir nossos alunos, e alcançar seus objetivos.</p>
+			<h2 class="text-center font-weight-normal mb-3">Inscreva-se</h2>
+			<p style="max-width: 650px">Ficou interessado em nossos cursos? Clique no botão abaixo e tenha sua inscrição feita em poucos minutos!</p>
+			<a href="subscribe.php" class="btn btn-light">Ir para página de inscrição</a>
 		</section>
 
 		<!-- CONTACT -->
-		<section class="w-100 p-3 d-flex flex-column align-items-center">
+		<section class="w-100 p-3 mb-4 pb-4 d-flex flex-column align-items-center">
 			<h2 class="text-center font-weight-normal">Entre em contato</h2>
 			<form method="post" action="?send=1" class="w-100 max-550">
 			  <div class="form-group">
@@ -118,12 +119,17 @@ if(isset($_GET['send']))
 			</form>
 		</section>
 
-		<!-- OPENING HOUR -->
-		<div class="mb-3 py-3 w-100 d-flex flex-column align-items-center">
-			<h3 class="text-center font-weight-normal">Horário de Atendimento</h3>
-			<span class="text-center">De segunda à sexta das 08h00 às 12h00 e das 13h30 às 17h00</span>
-		</div>
+		<!-- ABOUT -->
+		<section style="background: linear-gradient(45deg, #029DC0, #016D94)" class="d-flex flex-column align-items-center w-100 py-4 px-3 text-center text-light">
+			<h2 class="text-center font-weight-normal mb-3">Sobre Nós</h2>
+			<p style="max-width: 650px">A Empresa Espaço do Trânsito LTDA. ME agora é uma realidade. Nosso objetivo é trabalhar mudanças de comportamentos no trânsito, através de cursos de capacitações e de formação, também estaremos junto com a sociedade realizando parcerias para um trânsito mais humano. Estaremos buscando o que há de melhor no mercado para instruir nossos alunos, e alcançar seus objetivos.</p>
+		</section>
 
+		<!-- OPENING HOUR -->
+		<div class="my-2 py-4 w-100 d-flex flex-column align-items-center">
+			<h2 class="text-center font-weight-normal">Horário de Atendimento</h2>
+			<p class="text-center">De segunda à sexta das 08h00 às 12h00 e das 13h30 às 17h00</p>
+		</div>
 
 		<!-- FOOTER -->
 		<footer class="d-flex flex-column align-items-center text-light w-100 background-right">
