@@ -1,6 +1,11 @@
 <?php
 
 include_once("Controller/MessageController.php");
+include_once("Controller/CourseController.php");
+
+$courseController = new CourseController($_POST);
+
+$courses = $courseController->getAll();
 
 if(isset($_GET['send']))
 {
@@ -60,28 +65,35 @@ if(isset($_GET['send']))
 			<!-- ADICIONAR SETA COM ANIMAÇÃO -->
 		</main>
 
-		<!-- NOTICES -->
+		<!-- COURSES -->
 		<section class="w-100 p-3 d-flex flex-column align-items-center">
 			<h2 class="text-center font-weight-normal mb-1">Destaques</h2>
 			<ul class="d-flex flex-column align-items-center p-0 w-100 list-unstyled">
-				<li class="jumbotron p-4 my-3 w-100 max-800">
-				  <h4 class="font-weight-normal">Formação para Instrutor</h4>
-				  <p class="lead">Início dia 25/01 a 22/03/2020. Sábados e Domingos - 08h00 as 17h20</p>
-				  <hr class="my-4">
-				  <a class="btn text-white blue-button" href="courses/instrutor.html" role="button">Saiba mais</a>
-				</li>
-				<li class="jumbotron p-4 my-3 w-100 max-800">
-				  <h4 class="font-weight-normal">Curso de Atualização para Instrutor - (C.A.I.)</h4>
-				  <p class="lead">Nos dias 08 e 09/02/2020 Sábado e Domingo.</p>
-				  <hr class="my-4">
-				  <a class="btn text-white blue-button" href="courses/atualizacao-instrutor.html" role="button">Saiba mais</a>
-				</li>
-				<li class="jumbotron p-4 my-3 w-100 max-800">
-				  <h4 class="font-weight-normal">Curso de Atualização de Diretor Geral - (ADG)</h4>
-				  <p class="lead">Dias 05 e 06 de Fevereiro de 2020.</p>
-				  <hr class="my-4">
-				  <a class="btn text-white blue-button" href="courses/atualizacao-diretor-geral.html" role="button">Saiba mais</a>
-				</li>
+				<?php
+
+				$count = 0;
+
+				while($row = mysqli_fetch_assoc($courses))
+				{
+					if($count == 4)
+					{
+						break;
+					}
+					echo "
+				  <div class='card shadow m-2 w-100 max-550'>
+						<div class='card-body p0 d-flex flex-column justify-content-between'>
+							<div>
+								<h4 class='card-title'>".$row['name']."</h4>
+								<p class='card-text text-muted'>".$row['description']."</p>
+							</div>
+							<a href='about-course.php?id=".$row['idtb_course']."' class='btn btn-light mt-2'>Ver mais</a>
+						</div>
+					</div>
+					";
+					$count++;
+				}
+
+				?>
 			</ul>
 		</section>
 
