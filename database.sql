@@ -50,6 +50,41 @@ CREATE TABLE IF NOT EXISTS `db_espaco_do_transito`.`tb_post` (
   PRIMARY KEY (`idtb_post`))
 ENGINE = InnoDB;
 
+CREATE TABLE IF NOT EXISTS `db_espaco_do_transito`.`tb_course` (
+  `idtb_course` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(150) NOT NULL,
+  `start` VARCHAR(70) NULL,
+  `courseLoad` INT NULL,
+  `prerequisites` TEXT NOT NULL,
+  `documents` TEXT NOT NULL,
+  `description` VARCHAR(200) NOT NULL,
+  PRIMARY KEY (`idtb_course`))
+ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `db_espaco_do_transito`.`tb_subscription` (
+  `idtb_subscription` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  `rg` VARCHAR(45) NOT NULL,
+  `cpf` VARCHAR(45) NOT NULL,
+  `birthday` DATE NOT NULL,
+  `address` VARCHAR(80) NOT NULL,
+  `number` INT NOT NULL,
+  `aditional` VARCHAR(45) NULL,
+  `district` VARCHAR(45) NOT NULL,
+  `city` VARCHAR(45) NOT NULL,
+  `uf` VARCHAR(5) NOT NULL,
+  `cep` VARCHAR(45) NOT NULL,
+  `phone` VARCHAR(45) NULL,
+  `cellphone` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(60) NOT NULL,
+  `cnh` VARCHAR(45) NOT NULL,
+  `categorie` CHAR(1) NOT NULL,
+  `renach` VARCHAR(45) NOT NULL,
+  `schooling` VARCHAR(80) NOT NULL,
+  `course` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`idtb_subscription`))
+ENGINE = InnoDB;
+
 insert into tb_message(email, name, topic, message, date) values('ruan.vscherer@gmail.com', 'Ruan', 'Ajuda', 'Oi', date(now()));
 
 insert into tb_user(login, password) values("admin", "123");
