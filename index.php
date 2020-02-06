@@ -67,7 +67,7 @@ if(isset($_GET['send']))
 
 		<!-- COURSES -->
 		<section class="w-100 p-3 d-flex flex-column align-items-center">
-			<h2 class="text-center font-weight-normal mb-1">Destaques</h2>
+			<h2 class="text-center font-weight-normal mb-2">Destaques</h2>
 			<ul class="d-flex flex-column align-items-center p-0 w-100 list-unstyled">
 				<?php
 
