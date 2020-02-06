@@ -39,7 +39,7 @@ $subscription = $subscriptionController->getSubscription();
   </head>
   <body>
 		<!-- HIGHLIGHT -->
-		<main class="d-flex flex-column align-items-center w-100 text-center text-light shadow background-right">
+		<main class="d-flex flex-column align-items-center w-100 text-center text-light shadow background-dark">
 			<!-- HEADER -->
 			<nav class="navbar px-4 py-3 navbar-expand-lg navbar-dark w-100 d-flex justify-content-between">
 				<h1 class="navbar-brand d-xs-none">Espaço do Trânsito</h1>
@@ -57,7 +57,7 @@ $subscription = $subscriptionController->getSubscription();
 			<div class="card w-100 max-800">
 			  <div class="card-header d-flex justify-content-between align-items-center">
 			  	Ficha de Inscrição
-			  	<a href="courses.php" class="btn btn-light btn-sm mx-1">Voltar</a>
+			  	<a href="subscriptions.php" class="btn btn-light btn-sm mx-1">Voltar</a>
 			  </div>
 			  <div class="card-body">
 			  	<h5 class="card-title">Curso de Interesse</h5>
