@@ -38,7 +38,7 @@ include_once("../Controller/UserController.php");
 
     <title>Administrator Login</title>
   </head>
-  <body class="background-right">
+  <body class="background-dark">
     <div class="d-flex flex-column align-items-center justify-content-center p-3 all-viewport">
       <div class="card shadow-lg" style="width: 100%; max-width: 500px">
         <div class="card-body p-4">

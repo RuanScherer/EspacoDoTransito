@@ -33,7 +33,7 @@ if(isset($_GET['logout']))
   </head>
   <body>
 		<!-- HIGHLIGHT -->
-		<main class="d-flex flex-column align-items-center w-100 text-center text-light pb-5 shadow background-right">
+		<main class="d-flex flex-column align-items-center w-100 text-center text-light pb-5 shadow background-dark">
 			<!-- HEADER -->
 			<nav class="navbar px-4 py-3 navbar-expand-lg navbar-dark w-100 d-flex justify-content-between">
 				<h1 class="navbar-brand d-xs-none">Espaço do Trânsito</h1>
