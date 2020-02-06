@@ -49,8 +49,8 @@ if(isset($_GET['logout']))
 		<!-- POSTS -->
 		<section class="w-100 px-3 py-4 d-flex flex-column align-items-center">
 			<h2 class="font-weight-normal mb-3">O que deseja fazer?</h2>
-			<ul class="d-flex flex-column flex-sm-row justify-content-center p-0 list-unstyled">
-				<div class="card shadow m-2 w-100 max-400">
+			<ul class="d-flex flex-column flex-sm-row flex-wrap justify-content-center p-0 list-unstyled">
+				<div class="card shadow m-2 w-100 max-400 w-100">
 					<div class="card-body p0 d-flex flex-column justify-content-between">
 						<div>
 							<h4 class="card-title">Mensagens</h4>
@@ -59,7 +59,7 @@ if(isset($_GET['logout']))
 						<a href="messages.php" class="text-center btn btn-outline-primary mt-3">Ir</a>
 					</div>
 				</div>
-				<div class="card shadow m-2 w-100 max-400">
+				<div class="card shadow m-2 w-100 max-400 w-100">
 					<div class="card-body p0 d-flex flex-column justify-content-between">
 						<div>
 							<h4 class="card-title">Blog</h4>
@@ -68,7 +68,7 @@ if(isset($_GET['logout']))
 						<a href="blog.php" class="text-center btn btn-outline-primary mt-3">Ir</a>
 					</div>
 				</div>
-				<div class="card shadow m-2 w-100 max-400">
+				<div class="card shadow m-2 w-100 max-400 w-100">
 					<div class="card-body p0 d-flex flex-column justify-content-between">
 						<div>
 							<h4 class="card-title">Cursos</h4>
@@ -77,7 +77,7 @@ if(isset($_GET['logout']))
 						<a href="courses.php" class="text-center btn btn-outline-primary mt-3">Ir</a>
 					</div>
 				</div>
-				<div class="card shadow m-2 w-100 max-400">
+				<div class="card shadow m-2 w-100 max-400 w-100">
 					<div class="card-body p0 d-flex flex-column justify-content-between">
 						<div>
 							<h4 class="card-title">Inscrições</h4>
