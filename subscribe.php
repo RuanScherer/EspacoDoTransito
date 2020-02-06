@@ -233,11 +233,12 @@ if(isset($_GET['send']))
     	send = document.querySelector("#send").onclick = () => {
     		count = 0;
     		fields.forEach((field) => {
+    			console.log(field.value.length);
     			if(field.value.length > 0) {
     				count += 1;
     			}
     		});
-    		if(count == 4) {
+    		if(count >= 16) {
     			alert("Inscrição efetuada com sucesso.");
     		} else {
     			count = 0;
