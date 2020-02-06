@@ -33,10 +33,24 @@ class CourseController extends Course
 		return mysqli_query($this->connect(), $query);
 	}
 
+	// Search for a course
+	public function getCourse()
+	{
+		$query = "select * from tb_course where idtb_course = ".$this->id;
+		return mysqli_query($this->connect(), $query);
+	}
+
 	// Delete course
 	public function delete()
 	{
 		$query = "delete from tb_course where idtb_course = ".$this->id;
+		return mysqli_query($this->connect(), $query);
+	}
+
+	// Edit a course
+	public function edit()
+	{
+		$query = "update tb_course set name = '".$this->name."', description = '".$this->description."', start = '".$this->start."', courseLoad = '".$this->courseload."', prerequisites = '".$this->prerequisites."', documents = '".$this->documents."' where idtb_course = ".$this->id;
 		return mysqli_query($this->connect(), $query);
 	}
 
