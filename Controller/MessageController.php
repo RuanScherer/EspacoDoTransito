@@ -29,7 +29,7 @@ class MessageController extends Message
 	// Search for all messages
 	public function getAll()
 	{
-		$query = "select * from tb_message";
+		$query = "select * from tb_message order by date desc";
 		return mysqli_query($this->connect(), $query);
 	}
 
