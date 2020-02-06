@@ -63,7 +63,7 @@ $posts = $postController->getAll();
 				while($row = mysqli_fetch_assoc($posts)) 
 				{
 					echo "
-					<div class='card shadow my-3 mx-sm-2 w-100 max-400'>
+					<div class='card shadow my-3 mx-sm-2 w-100 max-550'>
 						<div class='card-body d-flex flex-column justify-content-between'>
 							<div>
 								<h4 class='card-title'>".$row['title']."</h4>
