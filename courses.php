@@ -94,6 +94,7 @@ $courses = $courseController->getAll();
 					</a>
 				</div>
 			</div>
+			<span class="mb-4">Desenvolvido por <strong><a class="text-white" href="https://www.instagram.com/scherer_programmer/" target="_blank">Ruan Scherer</a> &#8599;</strong></span>
 		</footer>
 
     <script src="js/jquery.slim.min.js"></script>
