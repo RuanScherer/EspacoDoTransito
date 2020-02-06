@@ -81,7 +81,6 @@ if(isset($_GET['send']))
 			</form>
 			<span class="text-muted mt-3 mb-2">contate-nos por telefone</span>
 			<span class="text-center my-1">(47) 3035-1915</span>
-			<span class="text-center my-1">(47) 3035-4280</span>
 			<span class="text-muted mt-3 mb-2">ou também</span>
 			<span class="text-center my-1"><a href="https://api.whatsapp.com/send?phone=5547988926175" class="btn-link">Fale conosco pelo WhatsApp</a></span>
 		</section>
