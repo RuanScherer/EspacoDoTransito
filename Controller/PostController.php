@@ -29,7 +29,7 @@ class PostController extends Post
 	// Search for all posts
 	public function getAll()
 	{
-		$query = "select * from tb_post";
+		$query = "select * from tb_post order by postDate desc";
 		return mysqli_query($this->connect(), $query);
 	}
 
@@ -43,7 +43,6 @@ class PostController extends Post
 	// Delete a post
 	public function delete()
 	{
-		echo "<script>alert('".$this->id."')</script>";
 		$query = "delete from tb_post where idtb_post = ".$this->id;
 		mysqli_query($this->connect(), $query);
 	}
