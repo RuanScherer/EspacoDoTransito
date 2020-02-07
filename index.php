@@ -110,7 +110,7 @@ if(isset($_GET['send']))
 		<section style="background: linear-gradient(45deg, #029DC0, #016D94)" class="d-flex flex-column align-items-center w-100 py-4 px-3 text-center text-light">
 			<h2 class="text-center font-weight-normal mb-3">Inscreva-se</h2>
 			<p style="max-width: 650px">Ficou interessado em nossos cursos? Clique no botão abaixo e tenha sua inscrição feita em poucos minutos!</p>
-			<a href="subscribe.php" class="btn btn-light">Ir para página de inscrição</a>
+			<a href="subscribe.php" class="btn btn-light shadow">Ir para página de inscrição</a>
 		</section>
 
 		<!-- CONTACT -->
