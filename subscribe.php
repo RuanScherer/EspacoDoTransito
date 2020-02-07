@@ -74,7 +74,7 @@ if(isset($_GET['send']))
 			</nav>
 
 			<div class="d-flex flex-column justify-content-center align-items-center py-4 w-100">
-				<h1 class="display-3 text-center title-width">Inscreva-se</h1>
+				<h1 class="text-center title-width">Inscreva-se</h1>
 				<h3 class="font-weight-normal subtitle-width">Preencha o formulário e em poucos minutos tenha sua inscrição realizada.</h3>
 			</div>
 

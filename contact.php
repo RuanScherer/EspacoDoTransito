@@ -55,7 +55,7 @@ if(isset($_GET['send']))
 			</nav>
 
 			<div class="d-flex flex-column justify-content-center align-items-center py-4 w-100">
-				<h1 class="display-3 text-center title-width">Contato</h1>
+				<h1 class="text-center title-width">Contato</h1>
 				<h3 class="font-weight-normal subtitle-width">Tire dúvidas ou deixe a sua mensagem.</h3>
 			</div>
 

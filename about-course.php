@@ -68,7 +68,7 @@ if(isset($_GET['delete']))
 				<?php
 				while($row = mysqli_fetch_assoc($course)) {
 				?>
-				<h1 class="display-3 text-center title-width"><?php echo $row['name']; ?></h1>
+				<h1 class="text-center title-width"><?php echo $row['name']; ?></h1>
 				<h3 class="font-weight-normal subtitle-width"><?php echo $row['description']; ?></h3>
 			</div>
 

@@ -52,7 +52,7 @@ $courses = $courseController->getAll();
 			</nav>
 
 			<div class="d-flex flex-column justify-content-center align-items-center py-4 w-100">
-				<h1 class="display-3 text-center title-width">Cursos</h1>
+				<h1 class="text-center title-width">Cursos</h1>
 				<h3 class="font-weight-normal subtitle-width">Conheça nossos cursos.</h3>
 			</div>
 
