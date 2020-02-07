@@ -61,8 +61,8 @@ if(isset($_GET['send']))
 				</div>
 			</nav>
 
-			<div class="d-flex flex-column justify-content-center align-items-center py-4 w-100 my-2">
-				<h1 class="display-3 text-center title-width">Espaço do Trânsito</h1>
+			<div class="d-flex flex-column justify-content-center align-items-center py-4 w-100">
+				<h1 class="text-center title-width">Espaço do Trânsito</h1>
 				<h3 class="font-weight-normal subtitle-width">Trabalhando com mudanças de comportamentos no trânsito.</h3>
 			</div>
 
