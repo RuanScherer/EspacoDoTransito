@@ -36,7 +36,8 @@ if(isset($_GET['send']))
   </head>
   <body>
 		<!-- HIGHLIGHT -->
-		<main class="d-flex flex-column align-items-center w-100 text-center text-light pb-5 background-right">
+		<main class="d-flex flex-column align-items-center w-100 text-center text-light background-right h100">
+			<div class="w-100 pb-5 d-flex flex-column align-items-center justify-content-between h100" style="background-color: rgba(0,0,0,0.5);">
 			<!-- HEADER -->
 			<nav class="navbar px-4 py-3 navbar-expand-lg navbar-dark w-100 d-flex justify-content-center">
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,9 +61,17 @@ if(isset($_GET['send']))
 				</div>
 			</nav>
 
-			<h1 class="text-center mt-4 title-width">Espaço do Trânsito</h1>
-			<h4 class="font-weight-normal mb-4 subtitle-width">Trabalhando com mudanças de comportamentos no trânsito.</h4>
+			<div class="d-flex flex-column justify-content-center align-items-center py-4">
+				<h1 class="text-center title-width">Espaço do Trânsito</h1>
+				<h4 class="font-weight-normal subtitle-width">Trabalhando com mudanças de comportamentos no trânsito.</h4>
+			</div>
+
+			<div class="d-flex flex-column align-items-center">
+				<h5 class="font-weight-normal">Role para baixo</h5>
+				<h5 class="mt-1">&#8595;</h5>
+			</div>
 			<!-- ADICIONAR SETA COM ANIMAÇÃO -->
+			</div>
 		</main>
 
 		<!-- COURSES -->
