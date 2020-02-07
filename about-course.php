@@ -2,17 +2,9 @@
 
 include_once("Controller/CourseController.php");
 
-session_start();
-
-if(!isset($_SESSION['id']) || !isset($_GET['id']))
+if(!isset($_GET['id']))
 {
-	Header("Location: login.php");
-}
-
-if(isset($_GET['logout']))
-{
-	session_destroy();
-	Header("Location: login.php");
+	Header("Location: courses.php.php");
 }
 
 $courseController = new CourseController($_GET);
