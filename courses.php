@@ -65,7 +65,7 @@ $courses = $courseController->getAll();
 		</main>
 
 		<!-- COURSES -->
-		<section class="w-100 p-4 d-flex flex-wrap align-items-center justify-content-center">
+		<section class="w-100 p-4 d-flex flex-wrap justify-content-center">
 			<?php
 
 			while($row = mysqli_fetch_assoc($courses))
