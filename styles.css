@@ -1,5 +1,11 @@
 .background-right {
-	background: linear-gradient(45deg, #016D94, #029DC0);
+	/*background: linear-gradient(45deg, #016D94, #029DC0);*/
+	background-image: url("assets/b2.jpg");
+	background-size: cover;
+}
+
+.h100 {
+	height: 100vh
 }
 
 .background-dark {
