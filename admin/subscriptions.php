@@ -65,19 +65,22 @@ $subscriptionController = new SubscriptionController($_POST);
 				if(isset($_GET['search']))
 				{
 					$subscriptions = $subscriptionController->getByName();
-					while($row = mysqli_fetch_assoc($subscriptions))
+					if(mysqli_num_rows($subscriptions) > 0) 
 					{
-						echo "
-					  <div class='card shadow m-2 w-100 max-400'>
-							<div class='card-body p0 d-flex flex-column justify-content-between'>
-								<div>
-									<h4 class='card-title'>".$row['name']."</h4>
-									<p class='card-text text-muted'>".$row['course']."</p>
+						while($row = mysqli_fetch_assoc($subscriptions))
+						{
+							echo "
+						  <div class='card shadow m-2 w-100 max-400'>
+								<div class='card-body p0 d-flex flex-column justify-content-between'>
+									<div>
+										<h4 class='card-title'>".$row['name']."</h4>
+										<p class='card-text text-muted'>".$row['course']."</p>
+									</div>
+									<a href='about-subscription.php?id=".$row['idtb_subscription']."' class='mt-3 btn btn-light'>Ver detalhes</a>
 								</div>
-								<a href='about-subscription.php?id=".$row['idtb_subscription']."' class='mt-3 btn btn-light'>Ver detalhes</a>
 							</div>
-						</div>
-						";
+							";
+						}
 					}
 				}
 				else
