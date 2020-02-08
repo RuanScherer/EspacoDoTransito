@@ -57,7 +57,10 @@ $subscription = $subscriptionController->getSubscription();
 			<div class="card w-100 max-800">
 			  <div class="card-header d-flex justify-content-between align-items-center">
 			  	Ficha de Inscrição
-			  	<a href="subscriptions.php" class="btn btn-light btn-sm mx-1">Voltar</a>
+			  	<div>
+			  		<a href="subscriptions.php" class="btn btn-light btn-sm mx-1">Voltar</a>
+			  		<a href="print.php?id=<?php echo $row['idtb_subscription']; ?>" class="btn btn-primary btn-sm mx-1">Imprimir</a>
+			  	</div>
 			  </div>
 			  <div class="card-body">
 			  	<h5 class="card-title">Curso de Interesse</h5>
