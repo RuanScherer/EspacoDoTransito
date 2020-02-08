@@ -43,6 +43,20 @@ class SubscriptionController extends Subscription
 		return mysqli_query($this->connect(), $query);
 	}
 
+	// Search by name
+	public function getByName()
+	{
+		$query = "select * from tb_subscription where name like '%".$this->name."%'";
+		if (strlen($this->name) == 0)
+		{
+			return $this->getAll();
+		}
+		else
+		{
+			return mysqli_query($this->connect(), $query);
+		}
+	}
+
 }
 
 ?>
