@@ -29,8 +29,8 @@ if(isset($_GET['send']))
   </head>
   <body>
 		<!-- HIGHLIGHT -->
-		<main class="d-flex flex-column align-items-center w-100 text-center text-light background-right h100">
-			<div class="w-100 pb-5 d-flex flex-column align-items-center justify-content-between h100" style="background-color: rgba(0,0,0,0.5);">
+		<main class="d-flex flex-column align-items-center w-100 text-center text-light background-right">
+			<div class="w-100 pb-5 d-flex flex-column align-items-center justify-content-between" style="background-color: rgba(0,0,0,0.5);">
 			<!-- HEADER -->
 			<nav class="navbar px-4 py-3 navbar-expand-lg navbar-dark w-100 d-flex justify-content-center">
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

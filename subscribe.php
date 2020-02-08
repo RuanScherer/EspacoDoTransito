@@ -48,8 +48,8 @@ if(isset($_GET['send']))
   		<button class="btn btn-sm btn-secondary mt-3" id="close-tip">Entendi</button>
   	</div>
 		<!-- HIGHLIGHT -->
-		<main class="d-flex flex-column align-items-center w-100 text-center text-light background-right h100">
-			<div class="w-100 pb-5 d-flex flex-column align-items-center justify-content-between h100" style="background-color: rgba(0,0,0,0.5);">
+		<main class="d-flex flex-column align-items-center w-100 text-center text-light background-right">
+			<div class="w-100 pb-5 d-flex flex-column align-items-center justify-content-between" style="background-color: rgba(0,0,0,0.5);">
 			<!-- HEADER -->
 			<nav class="navbar px-4 py-3 navbar-expand-lg navbar-dark w-100 d-flex justify-content-center">
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -151,7 +151,7 @@ if(isset($_GET['send']))
 			  </div>
 			  <div class="form-group">
 			    <label for="categorie">Categoria</label>
-			    <input type="text" class="form-control field" id="categorie" name="categorie" maxlength="1" required>
+			    <input type="text" class="form-control field" id="categorie" name="categorie" maxlength="2" required>
 			  </div>
 			  <div class="form-group">
 			    <label for="renach">RENACH</label>
