@@ -36,7 +36,7 @@ if(isset($_GET['send']))
   </head>
   <body>
 		<!-- HIGHLIGHT -->
-		<main class="d-flex flex-column align-items-center w-100 text-center text-light background-right ">
+		<main class="d-flex flex-column align-items-center w-100 text-center text-light background-right">
 			<div class="w-100 pb-5 d-flex flex-column align-items-center justify-content-between" style="background-color: rgba(0,0,0,0.5);">
 			<!-- HEADER -->
 			<nav class="navbar px-4 py-3 navbar-expand-lg navbar-dark w-100 d-flex justify-content-center">
