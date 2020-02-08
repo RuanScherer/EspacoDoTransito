@@ -17,8 +17,6 @@ if(isset($_GET['logout']))
 
 $subscriptionController = new SubscriptionController($_POST);
 
-$subscriptions = $subscriptionController->getAll();
-
 ?>
 
 <!DOCTYPE html>
@@ -54,23 +52,51 @@ $subscriptions = $subscriptionController->getAll();
 			<div class="w-100 mb-2">
 				<a href="dashboard.php" class="text-muted text-decoration-none">Voltar para o painel administrativo</a>
 			</div>
-			<h2 class="font-weight-normal mb-4 align-self-start">Inscrições</h2>
-			<ul class="list-group p-0 w-100 d-flex flex-column flex-sm-row flex-wrap unstyled-list">
+			<div class="d-flex flex-sm-row flex-column justify-content-between align-items-center w-100 mb-4">
+				<h2 class="font-weight-normal mt-2">Inscrições</h2>
+				<form action="?search=1" method="post" class="d-flex mt-2">
+				  <input type="text" class="form-control mx-2" id="name" name="name" placeholder="Digite um nome">
+					<button class="btn btn-success">Buscar</button>
+				</form>
+			</div>
+			<ul class="list-group p-0 w-100 d-flex flex-column flex-lg-row align-items-center flex-wrap unstyled-list">
 				<?php
 
-				while($row = mysqli_fetch_assoc($subscriptions))
+				if(isset($_GET['search']))
 				{
-					echo "
-				  <div class='card shadow m-2 w-100 max-400'>
-						<div class='card-body p0 d-flex flex-column justify-content-between'>
-							<div>
-								<h4 class='card-title'>".$row['name']."</h4>
-								<p class='card-text text-muted'>".$row['course']."</p>
+					$subscriptions = $subscriptionController->getByName();
+					while($row = mysqli_fetch_assoc($subscriptions))
+					{
+						echo "
+					  <div class='card shadow m-2 w-100 max-400'>
+							<div class='card-body p0 d-flex flex-column justify-content-between'>
+								<div>
+									<h4 class='card-title'>".$row['name']."</h4>
+									<p class='card-text text-muted'>".$row['course']."</p>
+								</div>
+								<a href='about-subscription.php?id=".$row['idtb_subscription']."' class='mt-3 btn btn-light'>Ver detalhes</a>
 							</div>
-							<a href='about-subscription.php?id=".$row['idtb_subscription']."' class='mt-3 btn btn-light'>Ver detalhes</a>
 						</div>
-					</div>
-					";
+						";
+					}
+				}
+				else
+				{
+					$subscriptions = $subscriptionController->getAll();
+					while($row = mysqli_fetch_assoc($subscriptions))
+					{
+						echo "
+					  <div class='card shadow m-2 w-100 max-400'>
+							<div class='card-body p0 d-flex flex-column justify-content-between'>
+								<div>
+									<h4 class='card-title'>".$row['name']."</h4>
+									<p class='card-text text-muted'>".$row['course']."</p>
+								</div>
+								<a href='about-subscription.php?id=".$row['idtb_subscription']."' class='mt-3 btn btn-light'>Ver detalhes</a>
+							</div>
+						</div>
+						";
+					}
 				}
 
 				?>
