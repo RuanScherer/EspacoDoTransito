@@ -67,14 +67,19 @@ if(isset($_GET['logout']))
           <input type="number" class="form-control" id="courseload" name="courseload" required>
         </div>
         <div class="form-group">
+          <label for="price">Valor</label>
+          <input type="text" class="form-control" id="price" name="price" required>
+          <small class="form-text text-muted">Utilize "." como separador ao invés de vírgula e não informe centavos.</small>
+        </div>
+        <div class="form-group">
           <label for="prerequisites">Pré-Requisitos</label>
           <textarea rows="4" class="form-control" id="prerequisites" name="prerequisites" required></textarea>
-          <small id="tip" class="form-text text-muted">Separe-os por vírgulas e o sistema irá formatá-los automaticamente quando forem exibidos.</small>
+          <small class="form-text text-muted">Separe-os por vírgulas e o sistema irá formatá-los automaticamente quando forem exibidos.</small>
         </div>
         <div class="form-group">
           <label for="documents">Documentos Necessários</label>
           <textarea rows="4" class="form-control" id="documents" name="documents" required></textarea>
-          <small id="tip" class="form-text text-muted">Separe-os por vírgulas e o sistema irá formatá-los automaticamente quando forem exibidos.</small>
+          <small class="form-text text-muted">Separe-os por vírgulas e o sistema irá formatá-los automaticamente quando forem exibidos.</small>
         </div>
         <?php
 
