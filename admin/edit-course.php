@@ -92,9 +92,19 @@ if(isset($_GET['alter']))
             <label for='prerequisites'>Pré-Requisitos</label>
             <textarea rows='4' type='text' class='form-control' id='prerequisites' name='prerequisites' aria-describedby='prerequisites' required>";
 
-          foreach (unserialize($row['prerequisites']) as $requisite) {
-            echo $requisite.",";
+          $count = 0;
+
+          foreach (unserialize($row['prerequisites']) as $requisite)
+          {
+            echo $requisite;
+            $count++;
+            if ($count < count(unserialize($row['prerequisites'])))
+            {
+              echo ",";
+            }
           }
+
+          $count = 0;
 
           echo "</textarea>
           </div>
@@ -102,8 +112,13 @@ if(isset($_GET['alter']))
             <label for='documents'>Documentos Necessários</label>
             <textarea rows='4' type='text' class='form-control' id='documents' name='documents' aria-describedby='documents' required>";
 
-          foreach (unserialize($row['documents']) as $requisite) {
-            echo $requisite.", ";
+          foreach (unserialize($row['documents']) as $document) {
+            echo $document;
+            $count++;
+            if ($count < count(unserialize($row['documents'])))
+            {
+              echo ",";
+            }
           }
           
           echo "</textarea>
