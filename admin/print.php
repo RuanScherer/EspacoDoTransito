@@ -37,6 +37,7 @@ $subscription = $subscriptionController->getSubscription();
 		while($row = mysqli_fetch_assoc($subscription)) {
 		?>
 		<section class="w-100 px-3 py-4 mb-3 d-flex flex-column align-items-center">
+			<img src="../assets/logo.png" style="width: 150px" class="mb-3">
 			<div class="card w-100 max-800">
 			  <div class="card-header">
 			  	Ficha de Inscrição
