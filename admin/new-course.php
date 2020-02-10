@@ -69,7 +69,6 @@ if(isset($_GET['logout']))
         <div class="form-group">
           <label for="price">Valor</label>
           <input type="text" class="form-control" id="price" name="price" required>
-          <small class="form-text text-muted">Utilize "." como separador ao invés de vírgula e não informe centavos.</small>
         </div>
         <div class="form-group">
           <label for="prerequisites">Pré-Requisitos</label>
