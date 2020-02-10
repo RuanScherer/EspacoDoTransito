@@ -58,6 +58,7 @@ CREATE TABLE IF NOT EXISTS `db_espaco_do_transito`.`tb_course` (
   `prerequisites` TEXT NOT NULL,
   `documents` TEXT NOT NULL,
   `description` VARCHAR(200) NOT NULL,
+  `price` FLOAT NOT NULL,
   PRIMARY KEY (`idtb_course`))
 ENGINE = InnoDB;
 
@@ -78,7 +79,7 @@ CREATE TABLE IF NOT EXISTS `db_espaco_do_transito`.`tb_subscription` (
   `cellphone` VARCHAR(45) NOT NULL,
   `email` VARCHAR(60) NOT NULL,
   `cnh` VARCHAR(45) NOT NULL,
-  `categorie` CHAR(1) NOT NULL,
+  `categorie` CHAR(2) NOT NULL,
   `renach` VARCHAR(45) NOT NULL,
   `schooling` VARCHAR(80) NOT NULL,
   `course` VARCHAR(100) NOT NULL,
