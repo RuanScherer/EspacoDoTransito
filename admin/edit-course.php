@@ -85,11 +85,15 @@ if(isset($_GET['alter']))
             <input type='number' class='form-control' id='courseLoad' name='courseload' aria-describedby='courseLoad' value='".$row['courseLoad']."' required>
           </div>
           <div class='form-group'>
+            <label for='price'>Valor</label>
+            <input type='text' class='form-control' id='price' name='price' value='".$row['price']."' required>
+          </div>
+          <div class='form-group'>
             <label for='prerequisites'>Pré-Requisitos</label>
             <textarea rows='4' type='text' class='form-control' id='prerequisites' name='prerequisites' aria-describedby='prerequisites' required>";
-          
+
           foreach (unserialize($row['prerequisites']) as $requisite) {
-            echo $requisite.", ";
+            echo $requisite.",";
           }
 
           echo "</textarea>
