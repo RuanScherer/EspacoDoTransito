@@ -13,7 +13,7 @@ class CourseController extends Course
 	// Create a new course
 	public function new()
 	{
-		$query = "insert into tb_course(name, description, start, courseload, prerequisites, documents, price) values('".$this->name."', '".$this->description."', '".$this->start."', '".$this->courseload."', '".$this->prerequisites."', '".$this->documents."', '".$this->price."')";
+		$query = "insert into tb_course(name, description, start, courseload, prerequisites, documents, price, payment) values('".$this->name."', '".$this->description."', '".$this->start."', '".$this->courseload."', '".$this->prerequisites."', '".$this->documents."', '".$this->price."', '".$this->payment."')";
 		$response = mysqli_query($this->connect(), $query);
 
 		if($response)
@@ -50,7 +50,7 @@ class CourseController extends Course
 	// Edit a course
 	public function edit()
 	{
-		$query = "update tb_course set name = '".$this->name."', description = '".$this->description."', start = '".$this->start."', courseLoad = '".$this->courseload."', prerequisites = '".$this->prerequisites."', documents = '".$this->documents."', price = '".$this->price."' where idtb_course = ".$this->id;
+		$query = "update tb_course set name = '".$this->name."', description = '".$this->description."', start = '".$this->start."', courseLoad = '".$this->courseload."', prerequisites = '".$this->prerequisites."', documents = '".$this->documents."', price = '".$this->price."', payment = '".$this->payment."' where idtb_course = ".$this->id;
 		return mysqli_query($this->connect(), $query);
 	}
 
