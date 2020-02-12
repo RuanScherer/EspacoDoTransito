@@ -96,14 +96,28 @@ if(isset($_GET['delete']))
 			  	<h5 class="card-title">Informações Básicas</h5>
 			    <p class="card-text my-2"><strong>Início: </strong><?php echo $row['start'];?></p>
 			    <p class="card-text my-2"><strong>Carga Horária: </strong><?php echo $row['courseLoad']; ?> horas</p>
-			    <p class="card-text my-2"><strong>Valor: </strong>R$<?php echo $row['price']; ?></p>
+			  </div>
+			  <hr class="my-2">
+			  <div class="card-body">
+			  	<h5 class="card-title">Financeiro</h5>
+			  	<p class="card-text my-2"><strong>Valor: </strong>R$<?php echo $row['price']; ?></p>
+			    <p class="card-text my-2"><strong>Formas de Pagamento:</strong></p>
+			  	<ul>
+			  		<?php
+			  			foreach (unserialize($row['payment']) as $payment) 
+			  			{
+			  				echo "<li>".$payment."</li>";
+			  			}
+			  		?>
+			  	</ul>
 			  </div>
 			  <hr class="my-2">
 			  <div class="card-body">
 			  	<h5 class="card-title">Pré-Requisitos</h5>
 			  	<ul>
 			  		<?php
-			  			foreach (unserialize($row['prerequisites']) as $requisite) {
+			  			foreach (unserialize($row['prerequisites']) as $requisite)
+			  			{
 			  				echo "<li>".$requisite."</li>";
 			  			}
 			  		?>
@@ -114,7 +128,8 @@ if(isset($_GET['delete']))
 			  	<h5 class="card-title">Documentos Necessários</h5>
 					<ul>
 			  		<?php
-			  			foreach (unserialize($row['documents']) as $document) {
+			  			foreach (unserialize($row['documents']) as $document)
+			  			{
 			  				echo "<li>".$document."</li>";
 			  			}
 			  		}
