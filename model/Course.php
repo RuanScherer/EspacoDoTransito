@@ -13,6 +13,7 @@ class Course extends Connection
 	private $prerequisites;
 	private $documents;
 	private $price;
+	private $payment;
 
 	public function __construct($post)
 	{
@@ -55,6 +56,14 @@ class Course extends Connection
 		if(isset($post['price']))
 		{
 			$this->price = $post['price'];
+		}
+		if(isset($post['payment']))
+		{
+			$payment = explode(",", $post['payment']);
+			foreach ($payment as $key) {
+				$key = trim($key);
+			}
+			$this->payment = serialize($payment);
 		}
 	}
 
