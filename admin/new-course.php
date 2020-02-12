@@ -71,6 +71,11 @@ if(isset($_GET['logout']))
           <input type="text" class="form-control" id="price" name="price" required>
         </div>
         <div class="form-group">
+          <label for="payment">Formas de Pagamento</label>
+          <textarea rows="4" class="form-control" id="payment" name="payment" required></textarea>
+          <small class="form-text text-muted">Separe-os por vírgulas e o sistema irá formatá-los automaticamente quando forem exibidos.</small>
+        </div>
+        <div class="form-group">
           <label for="prerequisites">Pré-Requisitos</label>
           <textarea rows="4" class="form-control" id="prerequisites" name="prerequisites" required></textarea>
           <small class="form-text text-muted">Separe-os por vírgulas e o sistema irá formatá-los automaticamente quando forem exibidos.</small>

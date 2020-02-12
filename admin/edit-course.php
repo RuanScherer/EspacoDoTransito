@@ -89,6 +89,26 @@ if(isset($_GET['alter']))
             <input type='text' class='form-control' id='price' name='price' value='".$row['price']."' required>
           </div>
           <div class='form-group'>
+            <label for='payment'>Formas de Pagamento</label>
+            <textarea rows='4' type='text' class='form-control' id='payment' name='payment' aria-describedby='payment' required>";
+
+          $count = 0;
+
+          foreach (unserialize($row['payment']) as $payment)
+          {
+            echo $payment;
+            $count++;
+            if ($count < count(unserialize($row['payment'])))
+            {
+              echo ",";
+            }
+          }
+
+
+          echo "</textarea>
+              <small class='form-text text-muted'>Separe-os por vírgulas e o sistema irá formatá-los automaticamente quando forem exibidos.</small>
+          </div>
+          <div class='form-group'>
             <label for='prerequisites'>Pré-Requisitos</label>
             <textarea rows='4' type='text' class='form-control' id='prerequisites' name='prerequisites' aria-describedby='prerequisites' required>";
 
@@ -107,6 +127,7 @@ if(isset($_GET['alter']))
           $count = 0;
 
           echo "</textarea>
+              <small class='form-text text-muted'>Separe-os por vírgulas e o sistema irá formatá-los automaticamente quando forem exibidos.</small>
           </div>
           <div class='form-group'>
             <label for='documents'>Documentos Necessários</label>
@@ -122,6 +143,7 @@ if(isset($_GET['alter']))
           }
           
           echo "</textarea>
+              <small class='form-text text-muted'>Separe-os por vírgulas e o sistema irá formatá-los automaticamente quando forem exibidos.</small>
           </div>";
         }
 
