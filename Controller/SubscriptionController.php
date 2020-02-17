@@ -15,8 +15,8 @@ class SubscriptionController extends Subscription
 	{
 		$query = "
 		insert into tb_subscription
-		(name, rg, cpf, birthday, address, number, aditional, district, city, uf, cep, phone, cellphone, email, cnh, categorie, renach, schooling, course)
-		values('".$this->name."', '".$this->rg."', '".$this->cpf."', '".$this->birthday."', '".$this->address."', '".$this->number."', '".$this->aditional."', '".$this->district."', '".$this->city."', '".$this->uf."', '".$this->cep."', '".$this->phone."', '".$this->cellphone."', '".$this->email."', '".$this->cnh."', '".$this->categorie."', '".$this->renach."', '".$this->schooling."', '".$this->course."')";
+		(name, rg, cpf, birthday, address, number, aditional, district, city, uf, cep, phone, cellphone, email, cnh, categorie, renach, schooling, course, subDate)
+		values('".$this->name."', '".$this->rg."', '".$this->cpf."', '".$this->birthday."', '".$this->address."', '".$this->number."', '".$this->aditional."', '".$this->district."', '".$this->city."', '".$this->uf."', '".$this->cep."', '".$this->phone."', '".$this->cellphone."', '".$this->email."', '".$this->cnh."', '".$this->categorie."', '".$this->renach."', '".$this->schooling."', '".$this->course."', date(now()))";
 		$response = mysqli_query($this->connect(), $query);
 
 		if($response)
@@ -32,7 +32,7 @@ class SubscriptionController extends Subscription
 	// Search for all subscriptions
 	public function getAll()
 	{
-		$query = "select * from tb_subscription";
+		$query = "select * from tb_subscription order by subDate desc";
 		return mysqli_query($this->connect(), $query);
 	}
 
@@ -46,7 +46,7 @@ class SubscriptionController extends Subscription
 	// Search by name
 	public function getByName()
 	{
-		$query = "select * from tb_subscription where name like '%".$this->name."%'";
+		$query = "select * from tb_subscription where name like '%".$this->name."%' order by subDate desc";
 		if (strlen($this->name) == 0)
 		{
 			return $this->getAll();
