@@ -15,8 +15,8 @@ class SubscriptionController extends Subscription
 	{
 		$query = "
 		insert into tb_subscription
-		(name, rg, cpf, birthday, address, number, aditional, district, city, uf, cep, phone, cellphone, email, cnh, categorie, renach, schooling, course, subDate)
-		values('".$this->name."', '".$this->rg."', '".$this->cpf."', '".$this->birthday."', '".$this->address."', '".$this->number."', '".$this->aditional."', '".$this->district."', '".$this->city."', '".$this->uf."', '".$this->cep."', '".$this->phone."', '".$this->cellphone."', '".$this->email."', '".$this->cnh."', '".$this->categorie."', '".$this->renach."', '".$this->schooling."', '".$this->course."', date(now()))";
+		(name, rg, cpf, birthday, address, number, aditional, district, city, uf, cep, phone, cellphone, email, cnh, categorie, renach, schooling, course, subDate, viewed)
+		values('".$this->name."', '".$this->rg."', '".$this->cpf."', '".$this->birthday."', '".$this->address."', '".$this->number."', '".$this->aditional."', '".$this->district."', '".$this->city."', '".$this->uf."', '".$this->cep."', '".$this->phone."', '".$this->cellphone."', '".$this->email."', '".$this->cnh."', '".$this->categorie."', '".$this->renach."', '".$this->schooling."', '".$this->course."', date(now())), '0'";
 		$response = mysqli_query($this->connect(), $query);
 
 		if($response)
@@ -57,6 +57,21 @@ class SubscriptionController extends Subscription
 		}
 	}
 
+	// Change the viewed state
+	public function setViewed()
+	{
+		$query = "update tb_subscription set viewed = '1' where idtb_subscription = '".$this->id."'";
+		$response = mysqli_query($this->connect(), $query);
+		if($response)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
 }
 
-?>
+?>	
