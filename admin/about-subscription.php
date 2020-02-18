@@ -19,6 +19,8 @@ $subscriptionController = new SubscriptionController($_GET);
 
 $subscription = $subscriptionController->getSubscription();
 
+$subscriptionController->setViewed();
+
 ?>
 
 <!DOCTYPE html>
@@ -63,8 +65,9 @@ $subscription = $subscriptionController->getSubscription();
 			  	</div>
 			  </div>
 			  <div class="card-body">
-			  	<h5 class="card-title">Curso de Interesse</h5>
-			    <p class="card-text my-2"><strong>Nome: </strong><?php echo $row['course'];?></p>
+			  	<h5 class="card-title">Informações Básicas</h5>
+			    <p class="card-text my-2"><strong>Curso de Interesse: </strong><?php echo $row['course'];?></p>
+			    <p class="card-text my-2"><strong>Data de Inscrição: </strong><?php echo date("d/m/Y", strtotime($row['subDate']));?></p>
 			  </div>
 			  <hr class="my-2">
 			  <div class="card-body">
