@@ -77,7 +77,7 @@ if(isset($_GET['send']))
 		<!-- COURSES -->
 		<section class="w-100 p-3 d-flex flex-column align-items-center">
 			<h2 class="text-center font-weight-normal mb-2">Destaques</h2>
-			<ul class="d-flex flex-column align-items-center p-0 w-100 list-unstyled">
+			<ul class="d-flex flex-wrap justify-content-center p-0 w-100 list-unstyled">
 				<?php
 
 				$count = 0;
@@ -143,7 +143,7 @@ if(isset($_GET['send']))
 		<!-- ABOUT -->
 		<section style="background: linear-gradient(45deg, #029DC0, #016D94)" class="d-flex flex-column align-items-center w-100 py-4 px-3 text-center text-light">
 			<h2 class="text-center font-weight-normal mb-3">Sobre Nós</h2>
-			<p style="max-width: 650px">A Empresa Espaço do Trânsito LTDA. ME agora é uma realidade. Nosso objetivo é trabalhar mudanças de comportamentos no trânsito, através de cursos de capacitações e de formação, também estaremos junto com a sociedade realizando parcerias para um trânsito mais humano. Estaremos buscando o que há de melhor no mercado para instruir nossos alunos, e alcançar seus objetivos.</p>
+			<p style="max-width: 650px">A empresa Espaço do Trânsito nasceu em 2010, através de seu idealizador Fábio Campos da Silva que tinha como objetivo transformar comportamentos no trânsito, e é isto que, com muito profissionalismo, estamos fazendo desde então através de cursos de formação para profissionais da área de trânsito (Diretores e Instrutores de Autoescola, Agente de trânsito, Motoristas profissionais que transportam pessoas e cargas... etc). Mas muito mais do que capacitar estes profissionais, temos como missão contribuir cada dia mais para um trânsito mais seguro e humano, afinal Nós Somos o Trânsito!</p>
 		</section>
 
 		<!-- OPENING HOUR -->
