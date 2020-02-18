@@ -73,7 +73,10 @@ $subscriptionController = new SubscriptionController($_POST);
 						  <div class='card shadow m-2 w-100 max-400'>
 								<div class='card-body p0 d-flex flex-column justify-content-between'>
 									<div>
-										<h4 class='card-title'>".$row['name']."</h4>
+										<div class='d-flex justify-content-between align-items-center'>
+											<h4 class='card-title'>".$row['name']."</h4>
+											<span class='text-muted'>".date("d/m/Y", strtotime($row['subDate']))."</span>
+										</div>
 										<p class='card-text text-muted'>".$row['course']."</p>
 									</div>
 									<a href='about-subscription.php?id=".$row['idtb_subscription']."' class='mt-3 btn btn-light'>Ver detalhes</a>
@@ -92,7 +95,10 @@ $subscriptionController = new SubscriptionController($_POST);
 					  <div class='card shadow m-2 w-100 max-400'>
 							<div class='card-body p0 d-flex flex-column justify-content-between'>
 								<div>
-									<h4 class='card-title'>".$row['name']."</h4>
+									<div class='d-flex justify-content-between align-items-center'>
+										<h4 class='card-title'>".$row['name']."</h4>
+										<span class='text-muted'>".date("d/m/Y", strtotime($row['subDate']))."</span>
+									</div>
 									<p class='card-text text-muted'>".$row['course']."</p>
 								</div>
 								<a href='about-subscription.php?id=".$row['idtb_subscription']."' class='mt-3 btn btn-light'>Ver detalhes</a>
