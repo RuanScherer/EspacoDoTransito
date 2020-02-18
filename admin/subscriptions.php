@@ -70,7 +70,12 @@ $subscriptionController = new SubscriptionController($_POST);
 						while($row = mysqli_fetch_assoc($subscriptions))
 						{
 							echo "
-						  <div class='card shadow m-2 w-100 max-400'>
+						  <div class='card shadow m-2 w-100 max-400";
+						  if ($row['viewed'] == 0) {
+						  	echo "border border-primary";
+						  }
+						  echo "
+						  '>
 								<div class='card-body p0 d-flex flex-column justify-content-between'>
 									<div>
 										<div class='d-flex justify-content-between align-items-center'>
@@ -92,7 +97,11 @@ $subscriptionController = new SubscriptionController($_POST);
 					while($row = mysqli_fetch_assoc($subscriptions))
 					{
 						echo "
-					  <div class='card shadow m-2 w-100 max-400'>
+					  <div class='card shadow m-2 w-100 max-400 ";
+					  if ($row['viewed'] == 0) {
+					  	echo "border border-primary";
+					  }
+					  echo "'>
 							<div class='card-body p0 d-flex flex-column justify-content-between'>
 								<div>
 									<div class='d-flex justify-content-between align-items-center'>
