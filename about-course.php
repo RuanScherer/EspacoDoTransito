@@ -4,7 +4,7 @@ include_once("Controller/CourseController.php");
 
 if(!isset($_GET['id']))
 {
-	Header("Location: courses.php.php");
+	Header("Location: courses.php");
 }
 
 $courseController = new CourseController($_GET);
@@ -82,8 +82,9 @@ if(isset($_GET['delete']))
 		<!-- ABOUT THE COURSE -->
 		<section class="w-100 px-3 py-4 mb-3 d-flex flex-column align-items-center">
 			<div class="card w-100 max-800">
-			  <div class="card-header d-flex justify-content-start">
+			  <div class="card-header d-flex justify-content-between align-items-center">
 			  	Sobre
+			  	<a href="subscribe.php?course=<?php echo $row['name']; ?>" class="btn btn-success">Inscrever-se</a>
 			  </div>
 			  <div class="card-body">
 			  	<h5 class="card-title">Informações Básicas</h5>
