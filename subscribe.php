@@ -171,29 +171,39 @@ if(isset($_GET['send']))
 			  </div>
 			  <div class="form-group">
 			    <label for="course">Curso de Interesse</label>
-			    <select class="custom-select" id="course" name="course" required>
-					  <option value="Atualização de Examinadores de Trânsito">Atualização de Examinadores de Trânsito</option>
-					  <option value="Atualização de Vistoria de Identificação Veicular">Atualização de Vistoria de Identificação Veicular</option>
-					  <option value="Atualização de Diretor de Ensino">Atualização de Diretor de Ensino</option>
-					  <option value="Atualização de Diretor Geral">Atualização de Diretor Geral</option>
-					  <option value="Atualização para Instrutor">Atualização para Instrutor</option>
-					  <option value="Formação para Diretor Geral - Intensivo">Formação para Diretor Geral - Intensivo</option>
-					  <option value="Transporte Coletivo de Passageiros">Transporte Coletivo de Passageiros</option>
-					  <option value="Transporte de Carga Indivisível">Transporte de Carga Indivisível</option>
-					  <option value="Transporte de Emergência">Transporte de Emergência</option>
-					  <option value="Transporte Escolar">Transporte Escolar</option>
-					  <option value="Vistoria e Identificação Veicular - Final de Semana">Vistoria e Identificação Veicular - Final de Semana</option>
-					  <option value="Transporte de Produtos Perigosos">Transporte de Produtos Perigosos</option>
-					  <option value="Formação de Diretor de Ensino">Formação de Diretor de Ensino</option>
-					  <option value="Formação para Instrutor - Intensivo">Formação para Instrutor - Intensivo</option>
-					  <option value="Atualização para Motofrete">Atualização para Motofrete</option>
-					  <option value="Examinador de Trânsito">Examinador de Trânsito</option>
-					  <option value="Condutores de Taxis- Intensivo">Condutores de Taxis- Intensivo</option>
-					  <option value="Curso para Despachante">Curso para Despachante</option>
-					  <option value="Formação para Instrutor - Finais de Semana">Formação para Instrutor - Finais de Semana</option>
-					  <option value="Motofrete">Motofrete</option>
-					  <option value="Programação Neurolinguística - Como melhorar a comunicação e as relações">Programação Neurolinguística - Como melhorar a comunicação e as relações</option>
-					</select>
+			    <?php
+		    		if(isset($_GET['course'])) {
+		    			echo "
+		    				<input class='form-control' type='text' value='".$_GET['course']."' disabled/>
+		    			";
+		    		}	else {
+		    			echo "
+						    <select class='custom-select' id='course' name='course' required>
+								  <option value='Atualização de Examinadores de Trânsito'>Atualização de Examinadores de Trânsito</option>
+								  <option value='Atualização de Vistoria de Identificação Veicular'>Atualização de Vistoria de Identificação Veicular</option>
+								  <option value='Atualização de Diretor de Ensino'>Atualização de Diretor de Ensino</option>
+								  <option value='Atualização de Diretor Geral'>Atualização de Diretor Geral</option>
+								  <option value='Atualização para Instrutor'>Atualização para Instrutor</option>
+								  <option value='Formação para Diretor Geral - Intensivo'>Formação para Diretor Geral - Intensivo</option>
+								  <option value='Transporte Coletivo de Passageiros'>Transporte Coletivo de Passageiros</option>
+								  <option value='Transporte de Carga Indivisível'>Transporte de Carga Indivisível</option>
+								  <option value='Transporte de Emergência'>Transporte de Emergência</option>
+								  <option value='Transporte Escolar'>Transporte Escolar</option>
+								  <option value='Vistoria e Identificação Veicular - Final de Semana'>Vistoria e Identificação Veicular - Final de Semana</option>
+								  <option value='Transporte de Produtos Perigosos'>Transporte de Produtos Perigosos</option>
+								  <option value='Formação de Diretor de Ensino'>Formação de Diretor de Ensino</option>
+								  <option value='Formação para Instrutor - Intensivo'>Formação para Instrutor - Intensivo</option>
+								  <option value='Atualização para Motofrete'>Atualização para Motofrete</option>
+								  <option value='Examinador de Trânsito'>Examinador de Trânsito</option>
+								  <option value='Condutores de Taxis- Intensivo'>Condutores de Taxis- Intensivo</option>
+								  <option value='Curso para Despachante'>Curso para Despachante</option>
+								  <option value='Formação para Instrutor - Finais de Semana'>Formação para Instrutor - Finais de Semana</option>
+								  <option value='Motofrete'>Motofrete</option>
+								  <option value='Programação Neurolinguística - Como melhorar a comunicação e as relações'>Programação Neurolinguística - Como melhorar a comunicação e as relações</option>
+								</select>
+							";
+						}
+					?>
 			  </div>
 			  <button type="submit" class="btn w-100 btn-success" id="send">Enviar</button>
 			</form>
