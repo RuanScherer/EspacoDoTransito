@@ -6,7 +6,7 @@ if(isset($_GET['send']))
 {
 	$subscription = new SubscriptionController($_POST);
 	$subscription->new();
-	Header("Location: subscribe.php");
+	//Header("Location: subscribe.php");
 }
 
 ?>
@@ -174,7 +174,8 @@ if(isset($_GET['send']))
 			    <?php
 		    		if(isset($_GET['course'])) {
 		    			echo "
-		    				<input class='form-control' type='text' name='course' value='".$_GET['course']."' disabled/>
+		    				<input class='form-control' type='text' name='course' value='".$_GET['course']."' aria-describedby='courseHelp'/>
+		    				<span id='courseHelp' class='form-text text-muted'>Recomendamos que você não edite este campo.</span>
 		    			";
 		    		}	else {
 		    			echo "
