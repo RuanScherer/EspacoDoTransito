@@ -174,7 +174,7 @@ if(isset($_GET['send']))
 			    <?php
 		    		if(isset($_GET['course'])) {
 		    			echo "
-		    				<input class='form-control' type='text' value='".$_GET['course']."' disabled/>
+		    				<input class='form-control' type='text' name='course' value='".$_GET['course']."' disabled/>
 		    			";
 		    		}	else {
 		    			echo "
@@ -200,6 +200,8 @@ if(isset($_GET['send']))
 								  <option value='Formação para Instrutor - Finais de Semana'>Formação para Instrutor - Finais de Semana</option>
 								  <option value='Motofrete'>Motofrete</option>
 								  <option value='Programação Neurolinguística - Como melhorar a comunicação e as relações'>Programação Neurolinguística - Como melhorar a comunicação e as relações</option>
+								  <option value='Curso de Despachante'>Curso de Despachante</option>
+					  			<option value='Curso de PNL'>Curso de PNL</option>
 								</select>
 							";
 						}
